@@ -12,7 +12,9 @@
 
   <header class="header">
     <h2 class="visually-hidden">Главное меню</h2>
-    <img class="gllacy-logo" src="img/header_logo.svg" alt="Глейси" width="155" height="65" />
+    <!-- Логитип -->
+    <img class="header__logo" src="img/header__logo.svg" alt="Глейси" width="155" height="65" />
+    <!-- Главное меню -->
     <nav class="main-nav">
       <ul class="main-nav__menu">
         <li class="main-nav__item">
@@ -43,49 +45,90 @@
         </li>
       </ul>
     </nav>
+    <!-- Меню с пользовательскими функциями -->
     <nav class="user-nav">
-      <!-- *Сделать картинки на кнопках псевдоэлементами -->
+      <!-- Кнопка поиска -->
       <button class="button button--nav" name="search-button">Поиск</button>
-      <a class="button button--nav" href="#">Вход</button>
-        <a class="button button--nav" href="#">
-          <span class="cart-counter">Пусто</span>
-          </button>
+      <!-- Форма поиска -->
+      <form class="search-form" action="#" method="get">
+        <h3 class="visually-hidden">Форма поиска</h3>
+        <label class="visually-hidden" for="search-input">Поиск:</label>
+        <input class="search-form__input" type="text" name="search-input" id="search-input" placeholder="Что ищем?">
+      </form>
+      <!-- Кнопка логина -->
+      <a class="button button--nav" href="#">Вход</a>
+      <!-- Форма логина -->
+      <form class="login-form" action="#" method="post">
+        <h3 class="visually-hidden">Форма входа</h3>
+        <label class="visually-hidden" for="email-input">Электронная почта:</label>
+        <input class="login-form__input" type="text" name="email-input" id="email-input" placeholder="Электронная почта">
+        <label class="visually-hidden" for="password-input">Пароль:</label>
+        <input class="login-form__input" type="password" name="password-input" id="password-input" placeholder="Пароль">
+        <button class="button" name="login-button">Войти</button>
+        <a class="login-form__link" href="#">Забыли пароль?</a>
+        <a class="login-form__link" href="#">Новая регистрация</a>
+      </form>
+      <!-- Кнопка корзины -->
+      <a class="button button--nav" href="#">
+        <span class="cart-counter">Пусто</span>
+      </a>
+      <!-- Корзина -->
+      <form class="cart" action="#" method="post">
+        <h3 class="visually-hidden">Корзина</h3>
+        <div class="cart__card">
+          <button class="button button--remove" name="cart-button-remove" id="cart-button-remove-1">Удалить</button>
+          <img class="cart__image" src="img/cart__orange.jpg" alt="Апельсиновый джем" width="35" height="35" />
+          <span class="cart__name">Пломбир с апельсиновым джемом</span>
+          <span class="cart__quantity">1,5 кг х</span>
+          <span class="cart__price">200 руб</span>
+          <span class="cart__subtotal">300 руб</span>
+        </div>
+        <div class="cart__card">
+          <button class="button button--remove" name="cart-button-remove" id="cart-button-remove-2">Удалить</button>
+          <img class="cart__image" src="img/cart__strawberry.jpg" alt="Клубника с белым шоколадом" width="35" height="35" />
+          <span class="cart__name">Клубничный пломбир с присыпкой из белого шоколада</span>
+          <span class="cart__quantity">1,5 кг х</span>
+          <span class="cart__price">300 руб</span>
+          <span class="cart__subtotal">450 руб</span>
+        </div>
+        <b class="cart__total">Итого: 750 руб.</b>
+        <button class="button" name="cart-button">Оформить заказ</button>
+      </form>
     </nav>
     <div class="workhours">С 10 до 20, ежедневно</div>
     <div class="phone">8 812 450-25-25</div>
-
   </header>
+  <main>
 
-  <section class="popups">
-    <form class="search-form" action="#" method="get">
-      <h3 class="visually-hidden">Форма поиска</h3>
-      <label class="visually-hidden" for="search-input">Поиск:</label>
-      <input class="search-form__input" type="text" name="search-input" id="search-input" placeholder="Что ищем?">
-    </form>
-    <form class="login-form" action="#" method="post">
-      <h3 class="visually-hidden">Форма входа</h3>
-      <label class="visually-hidden" for="email-input">Электронная почта:</label>
-      <input class="login-form__input" type="text" name="email-input" id="email-input" placeholder="Электронная почта">
-      <label class="visually-hidden" for="password-input">Пароль:</label>
-      <input class="login-form__input" type="password" name="password-input" id="password-input" placeholder="Пароль">
-      <button class="button button--small" name="login-button">Войти</button>
-      <a class="login-form__link" href="#">Забыли пароль?</a>
-      <a class="login-form__link" href="#">Новая регистрация</a>
-    </form>
-    <form class="feedback-form" action="#" method="post">
-      <h3 class="visually-hidden">Форма обратной связи</h3>
-      <b class="feedback-form__title">Мы обязательно вам ответим!</b>
-      <label class="visually-hidden" for="name-input">Ваше имя:</label>
-      <input class="feedback-form__input" type="text" name="name-input" id="name-input" placeholder="Как вас зовут?">
-      <label class="visually-hidden" for="feedback-email-input">Электронная почта:</label>
-      <input class="feedback-form__input" type="text" name="feedback-email-input" id="feedback-email-input" placeholder="Ваша почта для ответа?">
-      <label class="visually-hidden" for="feedback-text-input">Вопрос:</label>
-      <textarea class="feedback-form__textarea" name="feedback-text-input" id="feedback-email-input" rows="10" cols="50">
-        Напишите что-нибудь...
-      </textarea>
-      <button class="button button--small" name="feedback-button">Отправить</button>
-    </form>
-  </section>
+    <section class="popups">
+      <!-- Форма обратной связи -->
+      <form class="feedback-form" action="#" method="post">
+        <h3 class="visually-hidden">Форма обратной связи</h3>
+        <b class="feedback-form__title">Мы обязательно вам ответим!</b>
+        <label class="visually-hidden" for="name-input">Ваше имя:</label>
+        <input class="feedback-form__input" type="text" name="name-input" id="name-input" placeholder="Как вас зовут?">
+        <label class="visually-hidden" for="feedback-email-input">Электронная почта:</label>
+        <input class="feedback-form__input" type="text" name="feedback-email-input" id="feedback-email-input" placeholder="Ваша почта для ответа?">
+        <label class="visually-hidden" for="feedback-text-input">Вопрос:</label>
+        <textarea class="feedback-form__textarea" name="feedback-text-input" id="feedback-email-input" rows="10" cols="50">
+          Напишите что-нибудь...
+        </textarea>
+        <button class="button" name="feedback-button">Отправить</button>
+      </form>
+    </section>
+
+    <section class="hero">
+      <h2 class="hero__slogan">Крем-брюле и пломбир с малиновым джемом</h2>
+      <h2 class="hero__slogan visually-hidden">Шоколадный пломбир и лимонный сорбет</h2>
+      <h2 class="hero__slogan visually-hidden">Пломбир с помадкой и клубничный щербет</h2>
+      <div class="carousel">
+        <button class="button button--carousel">1</button>
+        <button class="button button--carousel inactive">2</button>
+        <button class="button button--carousel inactive">3</button>
+      </div>
+      <button class="button button--big" name="hero-button">Давайте оба!</button>
+    </section>
+  </main>
 </body>
 
 </html>
