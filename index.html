@@ -46,6 +46,7 @@
       </ul>
     </nav>
     <!-- Меню с пользовательскими функциями -->
+    <!-- Иконки кнопок вставить псевдоэлементами -->
     <nav class="user-nav">
       <!-- Кнопка поиска -->
       <button class="button button--nav" name="search-button">Поиск</button>
@@ -138,48 +139,85 @@
       <div class="card">
         <h3 class="card__title">Малинка даром!</h3>
         <p class="card__content">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-        <a class="button" href="#">Хочу варенье!</button>
+        <a class="button" href="#">Хочу варенье!</a>
       </div>
       <div class="card">
         <h3 class="card__title">Шоколадки даром!</h3>
         <p class="card__content">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <a class="button" href="#">Хочу шоколадки!</button>
+        <a class="button" href="#">Хочу шоколадки!</a>
       </div>
     </section>
 
     <section class="hits container">
       <!-- Популярные товары -->
+      <h2 class="visually-hidden">Популярные товары</h2>
       <ul class="hits__list">
         <li class="hits__item">
-          <img class="hits__image" src="img/hits__orange.jpg" alt="">
-          <b class="hits__price">310 /кг</b>
-          <a class="hits__name" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой </a>
+          <p class="hits__icon">Хит</p>
+          <img class="hits__image" src="img/hits__orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+          <strong class="hits__price">310 ₽</strong>
+          <strong class="hits__kg">/кг</strong>
+          <a class="hits__name" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </li>
         <li class="hits__item">
-          <img class="hits__image" src="" alt="">
-          <b class="hits__price">380 /кг</b>
-          <a class="hits__name" href="">Сливочно-кофейное с кусочками шоколада</a>
+          <p class="hits__icon">Хит</p>
+          <img class="hits__image" src="img/hits__coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+          <strong class="hits__price">380 ₽</strong>
+          <strong class="hits__kg">/кг</strong>
+          <a class="hits__name" href="#">Сливочно-кофейное с кусочками шоколада</a>
         </li>
         <li class="hits__item">
-          <img class="hits__image" src="" alt="">
-          <b class="hits__price">355 /кг</b>
-          <a class="hits__name" href="">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          <p class="hits__icon">Хит</p>
+          <img class="hits__image" src="img/hits__strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
+          <strong class="hits__price">355 ₽</strong>
+          <strong class="hits__kg">/кг</strong>
+          <a class="hits__name" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
         </li>
         <li class="hits__item">
-          <img class="hits__image" src="" alt="">
-          <b class="hits__price">415 /кг</b>
-          <a class="hits__name" href="">Сливочное крем-брюле с карамельной подливкой</a>
+          <p class="hits__icon">Хит</p>
+          <img class="hits__image" src="img/hits__cream.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+          <strong class="hits__price">415 ₽</strong>
+          <strong class="hits__kg">/кг</strong>
+          <a class="hits__name" href="#">Сливочное крем-брюле с карамельной подливкой</a>
         </li>
       </ul>
-
     </section>
 
     <section class="advantages container">
-
+      <!-- Преимущества -->
+      <!-- Иконки вставить псевдоэлементами -->
+      <h2 class="visually-hidden">Наши преимущества</h2>
+      <h3 class="advantages__title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <p class="advantages_content">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий</p>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages_content">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages_content">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages_content">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+        </li>
+      </ul>
     </section>
 
     <section class="news container">
-
+      <!-- Новости и подписка -->
+      <h2 class="visually-hidden">Наши новости</h2>
+      <article class="blog">
+        <h3 class="blog__title">Новое в нашем блоге</h3>
+        <a class="blog__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+      </article>
+      <form class="subscribe-form" action="#" method="post">
+        <h3 class="visually-hidden">Подписаться на рассылку</h3>
+        <p class="subscribe__content">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+        <label class="visually-hidden" for="subscribe-email-input">Электронная почта:</label>
+        <input class="subscribe-form__input" type="text" name="subscribe-email-input" id="subscribe-email-input" placeholder="Электронная почта">
+        <button class="button" name="subscribe-button">Отправить</button>
+      </form>
     </section>
 
     <section class="map">
