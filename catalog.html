@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Каталог Глейси</title>
+</head>
+
+<body>
+
+  <header class="header container">
+    <h2 class="visually-hidden">Главное меню</h2>
+    <!-- Логитип -->
+    <img class="header__logo" src="img/header__logo.svg" alt="Глейси" width="155" height="65" />
+    <!-- Главное меню -->
+    <nav class="main-nav">
+      <ul class="main-nav__menu">
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--active">Каталог</a>
+          <ul class="main-nav__submenu visually-hidden">
+            <li class="main-nav__subitem main-nav__promoitem">
+              <a class="main-nav__sublink" href="#">Новинки</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a class="main-nav__sublink" href="#">Сливочное</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a class="main-nav__sublink" href="#">Щербеты</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a class="main-nav__sublink" href="#">Фруктовый лед</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a class="main-nav__sublink" href="#">Мелорин</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Доставка и оплата</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">О Компании</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Меню с пользовательскими функциями -->
+    <!-- Иконки кнопок вставить псевдоэлементами -->
+    <nav class="user-nav">
+      <!-- Кнопка поиска -->
+      <button class="button button--nav button--search" name="search-button">Поиск</button>
+      <!-- Форма поиска -->
+      <form class="search-form" action="#" method="get">
+        <h3 class="visually-hidden">Форма поиска</h3>
+        <label class="visually-hidden" for="search-input">Поиск:</label>
+        <input class="search-form__input" type="text" name="search-input" id="search-input" placeholder="Что ищем?">
+      </form>
+      <!-- Кнопка логина -->
+      <a class="button button--nav button--login" href="#">Вход</a>
+      <!-- Форма логина -->
+      <form class="login-form" action="#" method="post">
+        <h3 class="visually-hidden">Форма входа</h3>
+        <label class="visually-hidden" for="email-input">Электронная почта:</label>
+        <input class="login-form__input" type="text" name="email-input" id="email-input" placeholder="Электронная почта">
+        <label class="visually-hidden" for="password-input">Пароль:</label>
+        <input class="login-form__input" type="password" name="password-input" id="password-input" placeholder="Пароль">
+        <button class="button" name="login-button">Войти</button>
+        <a class="login-form__link" href="#">Забыли пароль?</a>
+        <a class="login-form__link" href="#">Новая регистрация</a>
+      </form>
+      <!-- Кнопка корзины -->
+      <a class="button button--nav button--cart-active" href="#">
+        <span class="cart-counter">2 товара</span>
+      </a>
+      <!-- Корзина -->
+      <form class="cart" action="#" method="post">
+        <h3 class="visually-hidden">Корзина</h3>
+        <div class="cart__card">
+          <button class="button button--remove" name="cart-button-remove" id="cart-button-remove-1">Удалить</button>
+          <img class="cart__image" src="img/cart__orange.jpg" alt="Апельсиновый джем" width="35" height="35" />
+          <span class="cart__name">Пломбир с апельсиновым джемом</span>
+          <span class="cart__quantity">1,5 кг х</span>
+          <span class="cart__price">200 руб</span>
+          <span class="cart__subtotal">300 руб</span>
+        </div>
+        <div class="cart__card">
+          <button class="button button--remove" name="cart-button-remove" id="cart-button-remove-2">Удалить</button>
+          <img class="cart__image" src="img/cart__strawberry.jpg" alt="Клубника с белым шоколадом" width="35" height="35" />
+          <span class="cart__name">Клубничный пломбир с присыпкой из белого шоколада</span>
+          <span class="cart__quantity">1,5 кг х</span>
+          <span class="cart__price">300 руб</span>
+          <span class="cart__subtotal">450 руб</span>
+        </div>
+        <b class="cart__total">Итого: 750 руб.</b>
+        <button class="button" name="cart-button">Оформить заказ</button>
+      </form>
+    </nav>
+    <nav class="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Каталог</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link">Сливочное</a>
+        </li>
+      </ul>
+    </nav>
+    <p class="workhours">С 10 до 20, ежедневно</p>
+    <p class="phone">8 812 450-25-25</p>
+  </header>
+  <main class="main">
+    <h2 class="main__title">Сливочное мороженое</h2>
+
+  </main>
+</body>
+
+</html>
