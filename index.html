@@ -119,15 +119,25 @@
     <section class="hero container">
       <!-- Слайдер -->
       <h2 class="visually-hidden">Рекомендуем</h2>
-      <h2 class="hero__slogan">Крем-брюле и пломбир с малиновым джемом</h2>
-      <h2 class="hero__slogan visually-hidden">Шоколадный пломбир и лимонный сорбет</h2>
-      <h2 class="hero__slogan visually-hidden">Пломбир с помадкой и клубничный щербет</h2>
-      <div class="carousel">
-        <button class="button button--carousel">1</button>
-        <button class="button button--carousel inactive">2</button>
-        <button class="button button--carousel inactive">3</button>
+      <div class="general-slider">
+        <div class="general-slider__item general-slider__item--active">
+          <h3 class="hero__slogan">Крем-брюле и пломбир с малиновым джемом</h3>
+          <a class="button button--big" href="#">Давайте оба!</a>
+        </div>
+        <div class="general-slider__item">
+          <h3 class="hero__slogan">Шоколадный пломбир и лимонный сорбет</h3>
+          <a class="button button--big" href="#">Давайте оба!</a>
+        </div>
+        <div class="general-slider__item">
+          <h3 class="hero__slogan">Пломбир с помадкой и клубничный щербет</h3>
+          <a class="button button--big" href="#">Давайте оба!</a>
+        </div>
       </div>
-      <button class="button button--big" name="hero-button">Давайте оба!</button>
+      <div class="slider-control">
+        <button class="slider-control__button slider-control__button--active">1</button>
+        <button class="slider-control__button">2</button>
+        <button class="slider-control__button">3</button>
+      </div>
     </section>
 
     <section class="promo container">
