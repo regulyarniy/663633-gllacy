@@ -52,51 +52,12 @@
     <div class="user-interface">
       <!-- Кнопка поиска -->
       <button class="button button--interface button--search" name="search-button">Поиск</button>
-      <!-- Форма поиска -->
-      <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-        <h3 class="visually-hidden">Форма поиска</h3>
-        <label class="visually-hidden" for="search-input">Поиск:</label>
-        <input class="search-form__input" type="text" name="search-input" id="search-input" placeholder="Что ищем?">
-      </form>
       <!-- Кнопка логина -->
       <a class="button button--interface button--login" href="#">Вход</a>
-      <!-- Форма логина -->
-      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-        <h3 class="visually-hidden">Форма входа</h3>
-        <label class="visually-hidden" for="email-input">Электронная почта:</label>
-        <input class="login-form__input" type="text" name="email-input" id="email-input" placeholder="Электронная почта">
-        <label class="visually-hidden" for="password-input">Пароль:</label>
-        <input class="login-form__input" type="password" name="password-input" id="password-input" placeholder="Пароль">
-        <button class="button button--primary" type="submit" name="login-button">Войти</button>
-        <a class="login-form__link" href="#">Забыли пароль?</a>
-        <a class="login-form__link" href="#">Новая регистрация</a>
-      </form>
       <!-- Кнопка корзины -->
       <button class="button button--interface button--cart-active" type="button">
         <span class="cart-counter">2 товара</span>
       </button>
-      <!-- Корзина -->
-      <form class="cart" action="https://echo.htmlacademy.ru" method="post">
-        <h3 class="visually-hidden">Корзина</h3>
-        <div class="cart__card">
-          <button class="button button--remove" type="button" name="cart-button-remove" id="cart-button-remove-1">Удалить</button>
-          <img class="cart__image" src="img/cart__orange.jpg" alt="Апельсиновый джем" width="35" height="35" />
-          <span class="cart__name">Пломбир с апельсиновым джемом</span>
-          <span class="cart__quantity">1,5 кг х</span>
-          <span class="cart__price">200 руб</span>
-          <span class="cart__subtotal">300 руб</span>
-        </div>
-        <div class="cart__card">
-          <button class="button button--remove" type="button" name="cart-button-remove" id="cart-button-remove-2">Удалить</button>
-          <img class="cart__image" src="img/cart__strawberry.jpg" alt="Клубника с белым шоколадом" width="35" height="35" />
-          <span class="cart__name">Клубничный пломбир с присыпкой из белого шоколада</span>
-          <span class="cart__quantity">1,5 кг х</span>
-          <span class="cart__price">300 руб</span>
-          <span class="cart__subtotal">450 руб</span>
-        </div>
-        <b class="cart__total">Итого: 750 руб.</b>
-        <button class="button button--primary" type="submit" name="cart-button">Оформить заказ</button>
-      </form>
     </div>
     <p class="workhours">С 10 до 20, ежедневно</p>
     <p class="phone">8 812 450-25-25</p>
@@ -352,6 +313,46 @@
       </a>Сделано в
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
     </p>
+    <!-- Формы -->
+    <!-- Форма поиска -->
+    <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+      <h3 class="visually-hidden">Форма поиска</h3>
+      <label class="visually-hidden" for="search-input">Поиск:</label>
+      <input class="search-form__input" type="text" name="search-input" id="search-input" placeholder="Что ищем?">
+    </form>
+    <!-- Форма логина -->
+    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+      <h3 class="visually-hidden">Форма входа</h3>
+      <label class="visually-hidden" for="email-input">Электронная почта:</label>
+      <input class="login-form__input" type="text" name="email-input" id="email-input" placeholder="Электронная почта">
+      <label class="visually-hidden" for="password-input">Пароль:</label>
+      <input class="login-form__input" type="password" name="password-input" id="password-input" placeholder="Пароль">
+      <button class="button button--primary" type="submit" name="login-button">Войти</button>
+      <a class="login-form__link" href="#">Забыли пароль?</a>
+      <a class="login-form__link" href="#">Новая регистрация</a>
+    </form>
+    <!-- Корзина -->
+    <form class="cart" action="https://echo.htmlacademy.ru" method="post">
+      <h3 class="visually-hidden">Корзина</h3>
+      <div class="cart__card">
+        <button class="button button--remove" type="button" name="cart-button-remove" id="cart-button-remove-1">Удалить</button>
+        <img class="cart__image" src="img/cart__orange.jpg" alt="Апельсиновый джем" width="35" height="35" />
+        <span class="cart__name">Пломбир с апельсиновым джемом</span>
+        <span class="cart__quantity">1,5 кг х</span>
+        <span class="cart__price">200 руб</span>
+        <span class="cart__subtotal">300 руб</span>
+      </div>
+      <div class="cart__card">
+        <button class="button button--remove" type="button" name="cart-button-remove" id="cart-button-remove-2">Удалить</button>
+        <img class="cart__image" src="img/cart__strawberry.jpg" alt="Клубника с белым шоколадом" width="35" height="35" />
+        <span class="cart__name">Клубничный пломбир с присыпкой из белого шоколада</span>
+        <span class="cart__quantity">1,5 кг х</span>
+        <span class="cart__price">300 руб</span>
+        <span class="cart__subtotal">450 руб</span>
+      </div>
+      <b class="cart__total">Итого: 750 руб.</b>
+      <button class="button button--primary" type="submit" name="cart-button">Оформить заказ</button>
+    </form>
   </footer>
 </body>
 
