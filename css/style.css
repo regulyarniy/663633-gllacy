@@ -1,0 +1,136 @@
+/* Общие стили */
+body {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #ffffff;
+
+  background-color: #849d8f;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* .visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+} */
+
+/* Шапка */
+.general-header__link {
+  display: inline-block;
+}
+.general-header__logo {
+  width: 155;
+  height: 65;
+}
+/*     Главное меню */
+.main-nav {
+  display: inline-block;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.main-nav__menu,
+.main-nav__submenu,
+.main-nav_item,
+.main-nav__subitem {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-nav__menu {
+  position: relative;
+
+  line-height: 18px;
+}
+
+.main-nav__item,
+.main-nav__link,
+.main-nav__sublink--active {
+  color: #ffffff;
+}
+
+.main-nav__link {
+  /* text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,0.2);
+  text-underline-position: under; */
+  background-image: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.2) 50%);
+  background-repeat: repeat-x;
+  background-position: 14px 100%;
+  background-size: 1px 1px;
+}
+
+.main-nav__link {
+  display: inline;
+  width: auto;
+  height: 32px;
+  padding-right: 14px;
+  padding-left: 14px;
+
+  border-radius: 15px;
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus {
+  color: #333333;
+
+  background-color: #ffffff;
+}
+
+.main-nav__item + .main-nav__submenu {
+  display: none;
+}
+
+/* .main-nav__link:hover + .main-nav__submenu {
+  display: block;
+} */
+
+
+
+
+/*           Подменю */
+.main-nav__submenu {
+  position: absolute;
+
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.main-nav__subitem,
+.main-nav__sublink {
+  color: #323232;
+  text-decoration: none;
+}
