@@ -549,6 +549,6 @@ a {
 
   background-image: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.2) 50%);
   background-repeat: repeat-x;
-  background-position: 14px 24px;
-  background-size: calc(100% - 28px) 1px;
+  background-position: 0 bottom;
+  background-size: 1px 1px;
 }
