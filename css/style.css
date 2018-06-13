@@ -283,15 +283,74 @@ a {
 
   background-color: #a1b4a9;
   background-image: none;
+  border-radius: 16px;
   box-shadow: none;
 }
 
 .button--interface:hover,
 .button--interface:focus,
-.button--interface:active {
+.button--interface:active,
+.button--cart-active:hover,
+.button--cart-active:focus,
+.button--cart-active:active {
   color: #323232;
 
   background-color: #f8f7f4;
-  background-image: none;
   box-shadow: none;
+}
+
+.button--search,
+.button--login,
+.button--cart,
+.button--cart-active {
+  background-repeat: no-repeat;
+}
+
+.button--login,
+.button--cart,
+.button--cart-active {
+  background-position: 16px center;
+}
+
+.button--search {
+  padding-left: 16px;
+
+  font-size: 0;
+
+  background-image: url("../img/button--search.svg");
+  background-position: center center;
+}
+
+.button--search:hover,
+.button--search:focus,
+.button--search:active {
+  background-image: url("../img/button--search--hover.svg");
+}
+
+.button--login {
+  background-image: url("../img/button--login.svg");
+}
+
+.button--login:hover,
+.button--login:focus,
+.button--login:active {
+  background-image: url("../img/button--login--hover.svg");
+}
+
+.button--cart,
+.button--cart:hover,
+.button--cart:focus,
+.button--cart:active {
+  color: inherit;
+
+  background-color: #a1b4a9;
+  background-image: url("../img/button--cart.svg");
+  box-shadow: none;
+}
+
+.button--cart-active,
+.button--cart-active:hover,
+.button--cart-active:focus,
+.button--cart-active:active {
+  background-image: url("../img/button--cart--full.svg");
 }
