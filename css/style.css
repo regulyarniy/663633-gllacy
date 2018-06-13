@@ -1,17 +1,4 @@
 /* Общие стили */
-body {
-  margin: 0;
-  padding: 0;
-
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  font-family: "Roboto", "Arial", sans-serif;
-  color: #ffffff;
-
-  background-color: #849d8f;
-}
-
 html {
   box-sizing: border-box;
 }
@@ -43,6 +30,35 @@ a {
 
   clip: rect(0 0 0 0);
 } */
+
+/* Фоны и свойства body */
+
+.general-body {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #ffffff;
+
+  background-color: #849d8f;
+}
+
+.general-body__slider1 {
+  background-color: #849d8f;
+}
+
+.general-body__slider2 {
+  background-color: #8996a6;
+}
+
+.general-body__slider3 {
+  background-color: #9d8b84;
+}
+
+/* Основные кнопки */
 
 .button {
   display: inline-block;
@@ -115,10 +131,8 @@ a {
   border-radius: 40px;
 }
 
-
-
-
 /* Шапка */
+
 .general-header__link {
   display: inline-block;
 }
