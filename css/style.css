@@ -44,6 +44,74 @@ a {
   clip: rect(0 0 0 0);
 } */
 
+.button {
+  display: inline-block;
+  height: 46px;
+  margin: 0;
+  margin-right: 8px;
+  padding-top: 11px;
+  padding-right: 24px;
+  padding-bottom: 11px;
+  padding-left: 24px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+
+  background-color: #dc4e33;
+  background-image: linear-gradient( to top, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 2px 2px 0 #9e4334;;
+}
+
+.button:hover,
+.button:focus {
+  color: #fefefe;
+
+  background-color: #f07a63;
+  background-image: linear-gradient( to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0 2px 2px 0 #ac1000;
+}
+
+.button:active {
+  color: #fceeec;
+
+  background-color: #ac1000;
+  background-image: linear-gradient( to top, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  box-shadow: inset 0 2px 2px 0 #952718;
+}
+
+.button--primary {
+  height: 46px;
+  padding-top: 11px;
+  padding-right: 24px;
+  padding-bottom: 11px;
+  padding-left: 24px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.button--big {
+  height: 63px;
+  padding-top: 11px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+}
+
+
+
+
 /* Шапка */
 .general-header__link {
   display: inline-block;
@@ -52,7 +120,9 @@ a {
   width: 155;
   height: 65;
 }
+
 /*     Главное меню */
+
 .main-nav {
   font-weight: 700;
   font-size: 16px;
@@ -85,7 +155,7 @@ a {
 .main-nav__link {
   background-image: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.2) 50%);
   background-repeat: no-repeat;
-  background-position: 14px 27px;
+  background-position: 14px 24px;
   background-size: calc(100% - 28px) 1px;
 }
 
@@ -93,8 +163,9 @@ a {
   display: inline-block;
   width: auto;
   height: 32px;
-  padding-top: 9px;
+  padding-top: 7px;
   padding-right: 14px;
+  padding-bottom: 7px;
   padding-left: 14px;
 
   border-radius: 15px;
@@ -184,4 +255,37 @@ a {
   color: #323232;
 
   background-color: #f6b5a5;
+}
+
+/*     Пользовательское меню */
+
+.user-interface {
+  display: flex;
+}
+
+.button--interface {
+  min-width: 10px;
+  height: 32px;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 44px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  background-color: #a1b4a9;
+  background-image: none;
+  box-shadow: none;
+}
+
+.button--interface:hover,
+.button--interface:focus,
+.button--interface:active {
+  color: #323232;
+
+  background-color: #f8f7f4;
+  background-image: none;
+  box-shadow: none;
 }
