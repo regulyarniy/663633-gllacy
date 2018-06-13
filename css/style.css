@@ -519,9 +519,9 @@ a {
 
 .products__item:hover > .visually-hidden.button--primary,
 .products__item:focus > .visually-hidden.button--primary {
-  position: unset;
+  position: static;
 
-  width: unset;
+  width: auto;
   height: 46px;
   margin: 0;
   padding-top: 11px;
@@ -534,8 +534,8 @@ a {
 
   border: unset;
 
-  clip: unset;
-  clip-path: unset;
+  clip: none;
+  clip-path: none;
 }
 
 .products__link,
