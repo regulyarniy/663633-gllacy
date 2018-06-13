@@ -447,9 +447,44 @@ a {
   box-shadow: none;
 }
 
+.button--slider-active,
 .button--slider:active,
 .button--slider-active:active {
   background-color: #ffffff;
   background-image: none;
   box-shadow: none;
+}
+
+/* Акции */
+
+.promo {
+  display: flex;
+}
+
+.promo__item {
+  width: 560px;
+  height: 229px;
+
+  font-weight: 700;
+
+  background-repeat: no-repeat;
+  border-radius: 12px;
+}
+
+.promo__item--1 {
+  background-image: url("../img/promo__item--1.jpg");
+}
+
+.promo__item--2 {
+  background-image: url("../img/promo__item--2.jpg");
+}
+
+.promo__title {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.promo__content {
+  font-size: 18px;
+  line-height: 22px;
 }
