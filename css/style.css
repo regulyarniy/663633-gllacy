@@ -1016,8 +1016,10 @@ a {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.pagination__link--disabled {
-  opacity: 0.2;
+.pagination__link--disabled,
+.pagination__link--disabled::before,
+.pagination__link--disabled::after {
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .pagination__link--prev,
