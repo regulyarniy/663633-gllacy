@@ -153,7 +153,9 @@ a {
 ====================================================================================================================================
   */
 
-.subscribe-form__input {
+.subscribe-form__input,
+.search-form__input,
+.login-form__input {
   height: 44px;
   padding-left: 15px;
 
@@ -169,15 +171,23 @@ a {
   border-radius: 5px;
 }
 
-.subscribe-form__input:hover {
+.subscribe-form__input:hover,
+.search-form__input:hover,
+.login-form__input:hover {
   border-color: rgba(154, 154, 154, 0.52);
 }
 
-.subscribe-form__input:focus {
+.subscribe-form__input:focus,
+.search-form__input:focus,
+.login-form__input:focus {
   border-color: rgba(46, 136, 228, 0.52);
 }
 
-.subscribe-form__input::placeholder {
+/* WARNING: Не работает MS! */
+.subscribe-form__input::-ms-input-placeholder,
+.subscribe-form__input::placeholder,
+.search-form__input::placeholder,
+.login-form__input::placeholder {
   color: #999999;
 }
 
@@ -189,7 +199,8 @@ a {
 .links__link,
 .products__title,
 .copyright__link,
-.breadcrumbs__link {
+.breadcrumbs__link,
+.login-form__link {
   display: inline;
 
   background-image: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.2) 50%);
@@ -209,7 +220,10 @@ a {
 .copyright__link:active,
 .breadcrumbs__link:hover,
 .breadcrumbs__link:focus,
-.breadcrumbs__link:active {
+.breadcrumbs__link:active,
+.login-form__link:hover,
+.login-form__link:focus,
+.login-form__link:active {
   color: #e84d37;
 
   background-image: linear-gradient(to right, rgba(232,77,55,0.2), rgba(232,77,55,0.2) 50%);
@@ -1350,7 +1364,52 @@ a {
   height: 39px;
 }
 
-/* Формы============================================================================================================================
+/* Скрытые формы ============================================================================================================================
 ====================================================================================================================================
 ====================================================================================================================================
  */
+
+.search-form,
+.login-form,
+.cart {
+  color: #323232;
+
+  background-color: #f8f7f4;
+  border-radius: 6px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Форма поиска ============================================================================================================================
+====================================================================================================================================
+====================================================================================================================================
+  */
+
+.search-form {
+  width: 341px;
+  min-height: 84px;
+}
+
+.search-form__input {
+  width: 315px;
+}
+
+/* Форма логина ============================================================================================================================
+====================================================================================================================================
+====================================================================================================================================
+   */
+
+.login-form {
+  width: 277px;
+  min-height: 214px;
+}
+
+.login-form__input {
+  width: 245px;
+}
+
+.login-form__link {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: inherit;
+}
