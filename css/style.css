@@ -970,6 +970,124 @@ a {
   width: 368px;
 }
 
+/* Пагинация */
+
+.pagination {
+  color: inherit;
+}
+
+.pagination__list {
+  display: flex;
+
+  list-style: none;
+}
+
+.pagination__item {
+  position: relative;
+
+  margin-left: 10px;
+}
+
+.pagination__link {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  padding-top: 4px;
+  padding-left: 8px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: inherit;
+
+  background-color: rgba(255, 255, 255, 0.0);
+  border-radius: 13px;
+}
+
+.pagination__link:hover,
+.pagination__link:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pagination__link--active,
+.pagination__link:active {
+  color: #323232;
+
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.pagination__link--disabled {
+  opacity: 0.2;
+}
+
+.pagination__link--prev,
+.pagination__link--next,
+.pagination__link--prev:hover,
+.pagination__link--next:hover,
+.pagination__link--prev:focus,
+.pagination__link--next:focus,
+.pagination__link--prev:active,
+.pagination__link--next:active {
+  width: 0;
+  height: 0;
+
+  font-size: 0;
+
+  background-color: rgba(255, 255, 255, 0.0);
+}
+
+.pagination__link--next::before,
+.pagination__link--next::after,
+.pagination__link--prev::before,
+.pagination__link--prev::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+
+  display: block;
+  width: 0;
+  height: 8px;
+}
+
+.pagination__link--next::before,
+.pagination__link--next::after {
+  right: 0;
+
+  border-right-width: 2px;
+  border-right-style: solid;
+}
+
+.pagination__link--next::before {
+  margin-top: -6px;
+
+  transform: rotate(135deg);
+}
+
+.pagination__link--next::after {
+  margin-top: -1px;
+
+  transform: rotate(45deg);
+}
+
+.pagination__link--prev::before,
+.pagination__link--prev::after {
+  left: 0;
+
+  border-left-width: 2px;
+  border-left-style: solid;
+}
+
+.pagination__link--prev::before {
+  margin-top: -6px;
+
+  transform: rotate(45deg);
+}
+
+.pagination__link--prev::after {
+  margin-top: -1px;
+
+  transform: rotate(135deg);
+}
 
 /* Карта */
 
