@@ -139,6 +139,38 @@ a {
   border-radius: 40px;
 }
 
+/* Поля ввода */
+
+.subscribe-form__input[type="text"] {
+  height: 44px;
+  padding-left: 15px;
+
+  font: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  color: #323232;
+
+  background-color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(179, 179, 179, 0.52);
+  border-radius: 5px;
+}
+
+.subscribe-form__input[type="text"]:hover {
+  border-color: rgba(154, 154, 154, 0.52);
+}
+
+.subscribe-form__input[type="text"]:focus {
+  border-color: rgba(46, 136, 228, 0.52);
+}
+
+.subscribe-form__input[type="text"]::placeholder {
+  color: #999999;
+}
+
+
+
 /* Шапка */
 
 .general-header__link {
@@ -696,4 +728,38 @@ a {
   color: #e84d37;
 
   background-image: linear-gradient(to right, rgba(232,77,55,0.2), rgba(232,77,55,0.2) 50%);
+}
+
+/* Подписка */
+
+.subscribe {
+  width: 560px;
+  height: 221px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #5a5a5a;
+
+  background-color: #f8f7f4;
+  background-image: linear-gradient(135deg, #fe9e90 12.50%, #f8f7f4 12.50%, #f8f7f4 25%, #92cdff 25%, #92cdff 37.50%, #f8f7f4 37.50%, #f8f7f4 50%, #fe9e90 50%, #fe9e90 62.50%, #f8f7f4 62.50%, #f8f7f4 75%, #92cdff 75%, #92cdff 87.50%, #f8f7f4 87.50%, #f8f7f4 100%);
+  background-repeat: repeat;
+  background-size: 38px 38px;
+  border-radius: 12px;
+}
+
+.subscribe-form {
+  position: absolute;
+
+  width: 550px;
+  height: 211px;
+  margin-top: 5px;
+  margin-left: 5px;
+
+  background-color: #f8f7f4;
+  border-radius: 12px;
+}
+
+.subscribe-form__input {
+  width: 368px;
 }
