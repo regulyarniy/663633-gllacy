@@ -169,7 +169,32 @@ a {
   color: #999999;
 }
 
+/* Подчеркивание и цвета ссылок*/
 
+.links__link,
+.products__title,
+.copyright__link {
+  display: inline;
+
+  background-image: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.2) 50%);
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  background-size: 1px 1px;
+}
+
+.links__link:hover,
+.links__link:focus,
+.links__link:active,
+.products__title:hover,
+.products__title:focus,
+.products__title:active,
+.copyright__link:hover,
+.copyright__link:focus,
+.copyright__link:active {
+  color: #e84d37;
+
+  background-image: linear-gradient(to right, rgba(232,77,55,0.2), rgba(232,77,55,0.2) 50%);
+}
 
 /* Шапка */
 
@@ -214,14 +239,6 @@ a {
 
 
 .main-nav__link {
-  /* Подчеркивание */
-  background-image: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.2) 50%);
-  background-repeat: no-repeat;
-  background-position: 14px 24px;
-  background-size: calc(100% - 28px) 1px;
-}
-
-.main-nav__link {
   display: inline-block;
   width: auto;
   height: 32px;
@@ -229,7 +246,12 @@ a {
   padding-right: 14px;
   padding-bottom: 7px;
   padding-left: 14px;
+  /* Подчеркивание для ссылок главного меню (inline-block) */
 
+  background-image: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.2) 50%);
+  background-repeat: no-repeat;
+  background-position: 14px 24px;
+  background-size: calc(100% - 28px) 1px;
   border-radius: 15px;
 }
 
@@ -611,24 +633,6 @@ a {
   line-height: 45px;
 }
 
-.products__title {
-  /* Подчеркивание */
-  display: inline;
-
-  background-image: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.2) 50%);
-  background-repeat: repeat-x;
-  background-position: 0 bottom;
-  background-size: 1px 1px;
-}
-
-.products__title:hover,
-.products__title:focus,
-.products__title:active {
-  color: #ffbc9e;
-
-  background-image: linear-gradient(to right, rgba(255,188,158,0.2), rgba(255,188,158,0.2) 50%);
-}
-
 /* Наши преимущества */
 
 .advantages {
@@ -811,7 +815,7 @@ a {
   line-height: 22px;
 }
 
-/* Подвал */
+/* Соцкнопки подвала */
 
 .social,
 .social__item,
@@ -823,4 +827,128 @@ a {
 .social,
 .links {
   display: flex;
+}
+
+.social__link {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+
+  font-size: 0;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-radius: 19px;
+}
+
+.social__link--twitter {
+  background-image: url("../img/social__link--twitter.svg");
+}
+
+.social__link--instagram {
+  background-image: url("../img/social__link--instagram.svg");
+}
+
+.social__link--facebook {
+  background-image: url("../img/social__link--facebook.svg");
+}
+
+.social__link--vkontakte {
+  background-image: url("../img/social__link--vkontakte.svg");
+}
+
+.social__link:hover,
+.social__link:focus,
+.social__link:active {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.social__link--twitter:hover,
+.social__link--twitter:focus {
+  background-image: url("../img/social__link--twitter--hover.svg");
+}
+
+.social__link--instagram:hover,
+.social__link--instagram:focus {
+  background-image: url("../img/social__link--instagram--hover.svg");
+}
+
+.social__link--facebook:hover,
+.social__link--facebook:focus {
+  background-image: url("../img/social__link--facebook--hover.svg");
+}
+
+.social__link--vkontakte:hover,
+.social__link--vkontakte:focus {
+  background-image: url("../img/social__link--vkontakte--hover.svg");
+}
+
+.social__link--twitter:active {
+  background-image: url("../img/social__link--twitter--active.svg");
+}
+
+.social__link--instagram:active {
+  background-image: url("../img/social__link--instagram--active.svg");
+}
+
+.social__link--facebook:active {
+  background-image: url("../img/social__link--facebook--active.svg");
+}
+
+.social__link--vkontakte:active {
+  background-image: url("../img/social__link--vkontakte--active.svg");
+}
+
+/* Ссылки подвала*/
+
+.links,
+.links__item,
+.links__link {
+  color: inherit;
+}
+
+.links__link {
+  position: relative;
+
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.links__link--like {
+  font-weight: 700;
+}
+
+.links__link--like::before {
+  content: "\2764";
+  position: absolute;
+  top: 0;
+  left: -15px;
+
+  font-weight: 400;
+
+  background-image: none;
+}
+
+/* Копирайт в подвале */
+
+.copyright,
+.copyright__link {
+  font-size: 12px;
+  line-height: 18px;
+  color: #fefefe;
+}
+
+.copyright__link--img,
+.copyright__link--img:hover,
+.copyright__link--img:focus,
+.copyright__link--img:active {
+  background-image: none;
+}
+
+.copyright__logo {
+  width: 108px;
+  height: 39px;
 }
