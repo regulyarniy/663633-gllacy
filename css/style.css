@@ -155,7 +155,9 @@ a {
 
 .subscribe-form__input,
 .search-form__input,
-.login-form__input {
+.login-form__input,
+.feedback-form__input,
+.feedback-form__textarea {
   height: 44px;
   padding-left: 15px;
 
@@ -173,13 +175,17 @@ a {
 
 .subscribe-form__input:hover,
 .search-form__input:hover,
-.login-form__input:hover {
+.login-form__input:hover,
+.feedback-form__input:hover,
+.feedback-form__textarea:hover {
   border-color: rgba(154, 154, 154, 0.52);
 }
 
 .subscribe-form__input:focus,
 .search-form__input:focus,
-.login-form__input:focus {
+.login-form__input:focus,
+.feedback-form__input:focus,
+.feedback-form__textarea:focus {
   border-color: rgba(46, 136, 228, 0.52);
 }
 
@@ -187,7 +193,9 @@ a {
 .subscribe-form__input::-ms-input-placeholder,
 .subscribe-form__input::placeholder,
 .search-form__input::placeholder,
-.login-form__input::placeholder {
+.login-form__input::placeholder,
+.feedback-form__input::placeholder,
+.feedback-form__textarea::placeholder {
   color: #999999;
 }
 
@@ -1371,7 +1379,8 @@ a {
 
 .search-form,
 .login-form,
-.cart {
+.cart,
+.feedback-form {
   color: #323232;
 
   background-color: #f8f7f4;
@@ -1412,4 +1421,171 @@ a {
   font-size: 13px;
   line-height: 24px;
   color: inherit;
+}
+
+/* Форма корзины  ============================================================================================================================
+====================================================================================================================================
+====================================================================================================================================
+   */
+
+.cart {
+  width: 539px;
+  min-height: 242px;
+
+  border-radius: 5px;
+}
+
+.cart__products {
+  display: flex;
+  flex-direction: column;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #cacac7;
+}
+
+.cart__row {
+  display: flex;
+  margin-top: 20px;
+}
+
+.cart__col-header {
+  display: block;
+
+  color: inherit;
+}
+
+.cart__td {
+  display: block;
+}
+
+.button--remove {
+  position: relative;
+
+  width: 11px;
+  height: 11px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+}
+
+.button--remove:hover,
+.button--remove:focus,
+.button--remove:active {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  opacity: 0.5;
+}
+
+.button--remove::before,
+.button--remove::after {
+  content: "";
+  position: absolute;
+
+  width: 1px;
+  height: 12px;
+
+  background-color: #2c2829;
+}
+
+.button--remove::before {
+  transform: rotate(45deg);
+}
+
+.button--remove::after {
+  transform: rotate(-45deg);
+}
+
+.cart__image {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 35px;
+}
+
+.cart__name {
+  max-width: 215px;
+}
+
+.cart__name,
+.cart__quantity,
+.cart__price,
+.cart__subtotal {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: inherit;
+}
+
+.cart__price {
+  color: #999999;
+}
+
+.cart__total {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: inherit;
+}
+
+/* Модальное окно и форма обратной связи  ============================================================================================================================
+====================================================================================================================================
+====================================================================================================================================
+   */
+
+.feedback {
+  color: inherit;
+}
+
+.modal {
+  position: relative;
+
+  color: inherit;
+}
+
+.button--modal-close {
+  position: absolute;
+  top: 5px;
+  left: 440px;
+
+  width: 18px;
+  height: 18px;
+}
+
+.button--modal-close::before,
+.button--modal-close::after {
+  width: 2px;
+  height: 18px;
+
+  background-color: #231f20;
+}
+
+.feedback-form {
+  width: 478px;
+  min-height: 443px;
+
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.feedback-form__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: inherit;
+}
+
+.feedback-form__input {
+  width: 271px;
+}
+
+.feedback-form__textarea {
+  width: 432px;
+  height: 159px;
+
+  resize: none;
 }
