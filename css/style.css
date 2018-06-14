@@ -173,7 +173,8 @@ a {
 
 .links__link,
 .products__title,
-.copyright__link {
+.copyright__link,
+.breadcrumbs__link {
   display: inline;
 
   background-image: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.2) 50%);
@@ -190,7 +191,10 @@ a {
 .products__title:active,
 .copyright__link:hover,
 .copyright__link:focus,
-.copyright__link:active {
+.copyright__link:active,
+.breadcrumbs__link:hover,
+.breadcrumbs__link:focus,
+.breadcrumbs__link:active {
   color: #e84d37;
 
   background-image: linear-gradient(to right, rgba(232,77,55,0.2), rgba(232,77,55,0.2) 50%);
@@ -275,7 +279,7 @@ a {
 }
 
 .main-nav__link + .main-nav__submenu {
-  /* !!!Переделать позже для доступности через visually-hidden! */
+  /* WARNING: Переделать позже для доступности через visually-hidden! */
   visibility: hidden;
 }
 
@@ -283,11 +287,12 @@ a {
 .main-nav__link:focus + .main-nav__submenu,
 .main-nav__submenu:hover,
 .main-nav__submenu:focus {
-  /* !!!Переделать позже для доступности через visually-hidden! */
+  /* WARNING: Переделать позже для доступности через visually-hidden! */
   visibility: visible;
 }
 
 /*Подменю */
+
 .main-nav__submenu {
   position: absolute;
 
@@ -448,7 +453,48 @@ a {
   line-height: 24px;
 }
 
+/* Хлебные крошки */
+
+.breadcrumbs {
+  display: inline;
+}
+
+.breadcrumbs__list,
+.breadcrumbs__item {
+  display: inline;
+
+  list-style: none;
+}
+
+.breadcrumbs__link {
+  position: relative;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: inherit;
+}
+
+.breadcrumbs__link::after {
+  content: "\00BB";
+  position: absolute;
+  top: 2px;
+  right: -5px;
+}
+
+.breadcrumbs__link--active,
+.breadcrumbs__link--active:hover,
+.breadcrumbs__link--active:focus,
+.breadcrumbs__link--active:active {
+  background-image: none;
+}
+
+.breadcrumbs__link--active::after {
+  content: none;
+}
+
 /* Слайдер */
+/* WARNING: Переделать через visually-hidden! */
 
 .general-slider__item {
   /* visibility: hidden; */
