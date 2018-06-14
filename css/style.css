@@ -478,10 +478,12 @@ a {
 }
 
 .promo__item--1 {
+  background-color: #851127;
   background-image: url("../img/promo__item--1.jpg");
 }
 
 .promo__item--2 {
+  background-color: #3e2419;
   background-image: url("../img/promo__item--2.jpg");
 }
 
