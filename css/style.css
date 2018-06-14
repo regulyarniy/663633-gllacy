@@ -86,7 +86,7 @@ a {
 
   background-color: #dc4e33;
   background-image: linear-gradient( to top, #e74b36 0%, #f26843 100%);
-  border: none;
+  border-width: 0;
   border-radius: 24px;
   box-shadow: 0 2px 2px 0 #9e4334;;
 }
@@ -240,7 +240,6 @@ a {
 .main-nav__link {
   color: #ffffff;
 }
-
 
 .main-nav__link {
   display: inline-block;
@@ -493,6 +492,15 @@ a {
   content: none;
 }
 
+/* Основной контент */
+
+.main__title {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 41px;
+  color: inherit;
+}
+
 /* Слайдер */
 /* WARNING: Переделать через visually-hidden! */
 
@@ -559,6 +567,154 @@ a {
   background-color: #ffffff;
   background-image: none;
   box-shadow: none;
+}
+
+/* Фильтр каталога */
+
+.filter {
+  color: inherit;
+}
+
+.filter__form {
+  max-width: 879px;
+}
+
+.filter__label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: inherit;
+}
+
+.filter__select,
+.filter__option {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: inherit;
+
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter__select {
+  border-radius: 15px;
+}
+
+.filter__select:hover,
+.filter__select:focus,
+.filter__select:active,
+.filter__option:hover,
+.filter__option:focus,
+.filter__option:active {
+  color: #323232;
+}
+
+.filter__range-start,
+.filter__range-end {
+  color: inherit;
+}
+
+.filter__range,
+.filter__item {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+
+.filter__range:hover,
+.filter__range:focus,
+.filter__range:active {
+  color: inherit;
+}
+
+.filter__radio {
+  width: 22px;
+  height: 22px;
+
+  background-color: transparent;
+  border-width: 2px;
+  border-color: #ffffff;
+  border-radius: 11px;
+  opacity: 0.8;
+}
+
+.filter__radio:hover,
+.filter__radio:active,
+.filter__radio:focus {
+  opacity: 1;
+}
+
+.filter__radio:disabled {
+  opacity: 0.4;
+}
+
+.filter__checkbox {
+  width: 22px;
+  height: 22px;
+
+  background-color: transparent;
+  border-color: #ffffff;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+.filter__checkbox:hover,
+.filter__checkbox:focus,
+.filter__checkbox:active {
+  opacity: 1;
+}
+
+.filter__checkbox:checked {
+  background-image: url(../img/filter__checkbox--checked.svg);
+}
+
+.filter__checkbox:disabled {
+  opacity: 0.4;
+}
+
+.button--filter {
+  display: inline-block;
+  height: 36px;
+  padding-top: 7px;
+  padding-right: 27px;
+  padding-bottom: 7px;
+  padding-left: 27px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: none;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: none;
+}
+
+.button--filter:hover,
+.button--filter:focus {
+  color: #323232;
+
+  background-color: #ffffff;
+  background-image: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.button--filter:active {
+  padding-top: 9px;
+  padding-right: 29px;
+  padding-bottom: 9px;
+  padding-left: 29px;
+
+  color: #323232;
+
+  background-color: #ededed;
+  background-image: none;
+  border-width: 0;
+  box-shadow: inset 0 2px 2px 0 #696969;
 }
 
 /* Акции */
