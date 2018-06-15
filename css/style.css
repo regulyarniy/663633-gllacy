@@ -945,20 +945,20 @@ a {
   background-position: -20px -10px;
 }
 
-.advantages__item--icon1 {
-  background-image: url("../img/advantages__item--icon1.svg");
+.advantages__item--ice-cream {
+  background-image: url("../img/advantages__item--ice-cream.svg");
 }
 
-.advantages__item--icon2 {
-  background-image: url("../img/advantages__item--icon2.svg");
+.advantages__item--cow {
+  background-image: url("../img/advantages__item--cow.svg");
 }
 
-.advantages__item--icon3 {
-  background-image: url("../img/advantages__item--icon3.svg");
+.advantages__item--leaf {
+  background-image: url("../img/advantages__item--leaf.svg");
 }
 
-.advantages__item--icon4 {
-  background-image: url("../img/advantages__item--icon4.svg");
+.advantages__item--thermo {
+  background-image: url("../img/advantages__item--thermo.svg");
 }
 
 /* Новости============================================================================================================================
