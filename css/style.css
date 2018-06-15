@@ -520,6 +520,7 @@ a {
   list-style: none;
 }
 
+.breadcrumbs__item,
 .breadcrumbs__link {
   position: relative;
 
@@ -536,7 +537,7 @@ a {
   right: -5px;
 }
 
-.breadcrumbs__link--active,
+/* .breadcrumbs__link--active,
 .breadcrumbs__link--active:hover,
 .breadcrumbs__link--active:focus,
 .breadcrumbs__link--active:active {
@@ -545,7 +546,7 @@ a {
 
 .breadcrumbs__link--active::after {
   content: none;
-}
+} */
 
 /* Основной контент============================================================================================================================
 ====================================================================================================================================
