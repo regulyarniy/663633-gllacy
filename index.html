@@ -14,53 +14,57 @@
 <body class="general-body general-body__slider1">
 
   <header class="general-header">
-    <!-- Логитип -->
-    <img class="general-header__logo" src="img/general-header__logo.svg" alt="Глейси" width="155" height="65" />
-    <!-- Главное меню -->
-    <nav class="main-nav">
-      <ul class="main-nav__menu">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Каталог</a>
-          <ul class="main-nav__submenu">
-            <li class="main-nav__subitem main-nav__promoitem">
-              <a class="main-nav__sublink" href="#">Новинки</a>
-            </li>
-            <li class="main-nav__subitem">
-              <a class="main-nav__sublink" href="catalog.html">Сливочное</a>
-            </li>
-            <li class="main-nav__subitem">
-              <a class="main-nav__sublink" href="#">Щербеты</a>
-            </li>
-            <li class="main-nav__subitem">
-              <a class="main-nav__sublink" href="#">Фруктовый лед</a>
-            </li>
-            <li class="main-nav__subitem">
-              <a class="main-nav__sublink" href="#">Мелорин</a>
-            </li>
-          </ul>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Доставка и оплата</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">О Компании</a>
-        </li>
-      </ul>
-    </nav>
-    <!-- Меню с пользовательскими функциями -->
-    <!-- Иконки кнопок вставить псевдоэлементами -->
-    <div class="user-interface">
-      <!-- Кнопка поиска -->
-      <button class="button button--interface button--search" name="search-button">Поиск</button>
-      <!-- Кнопка логина -->
-      <a class="button button--interface button--login" href="#">Вход</a>
-      <!-- Кнопка корзины -->
-      <a class="button button--interface button--cart" href="#">
+    <div class="container flex">
+      <!-- Логитип -->
+      <img class="general-header__logo" src="img/general-header__logo.svg" alt="Глейси" width="155" height="65" />
+      <!-- Главное меню -->
+      <nav class="main-nav">
+        <ul class="main-nav__menu">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Каталог</a>
+            <ul class="main-nav__submenu">
+              <li class="main-nav__subitem main-nav__promoitem">
+                <a class="main-nav__sublink" href="#">Новинки</a>
+              </li>
+              <li class="main-nav__subitem">
+                <a class="main-nav__sublink" href="catalog.html">Сливочное</a>
+              </li>
+              <li class="main-nav__subitem">
+                <a class="main-nav__sublink" href="#">Щербеты</a>
+              </li>
+              <li class="main-nav__subitem">
+                <a class="main-nav__sublink" href="#">Фруктовый лед</a>
+              </li>
+              <li class="main-nav__subitem">
+                <a class="main-nav__sublink" href="#">Мелорин</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Доставка и оплата</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">О Компании</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Меню с пользовательскими функциями -->
+      <!-- Иконки кнопок вставить псевдоэлементами -->
+      <div class="user-interface">
+        <!-- Кнопка поиска -->
+        <button class="button button--interface button--search" name="search-button">Поиск</button>
+        <!-- Кнопка логина -->
+        <a class="button button--interface button--login" href="#">Вход</a>
+        <!-- Кнопка корзины -->
+        <a class="button button--interface button--cart" href="#">
         <span class="cart-counter">Пусто</span>
       </a>
+      </div>
     </div>
-    <p class="workhours">С 10 до 20, ежедневно</p>
-    <p class="phone">8 812 450-25-25</p>
+    <div class="container flex flex--column">
+      <p class="workhours">С 10 до 20, ежедневно</p>
+      <p class="phone">8 812 450-25-25</p>
+    </div>
   </header>
 
   <main class="main">
