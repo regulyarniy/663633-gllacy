@@ -70,26 +70,28 @@
   <main class="main">
 
     <section class="hero">
-      <!-- Слайдер -->
-      <h2 class="visually-hidden">Рекомендуемые товары</h2>
-      <div class="general-slider">
-        <div class="general-slider__item general-slider__item--1 general-slider__item--active">
-          <h3 class="hero__slogan">Крем-брюле и пломбир с малиновым джемом</h3>
-          <a class="button button--big" href="#">Давайте оба!</a>
+      <div class="container">
+        <!-- Слайдер -->
+        <div class="slider-control">
+          <button class="button button--slider-active" type="button" name="slider-control-1">1</button>
+          <button class="button button--slider" type="button" name="slider-control-2">2</button>
+          <button class="button button--slider" type="button" name="slider-control-3">3</button>
         </div>
-        <div class="general-slider__item general-slider__item--2">
-          <h3 class="hero__slogan">Шоколадный пломбир и лимонный сорбет</h3>
-          <a class="button button--big" href="#">Давайте оба!</a>
+        <h2 class="visually-hidden">Рекомендуемые товары</h2>
+        <div class="general-slider">
+          <div class="general-slider__item general-slider__item--1 flex flex--column flex--center">
+            <h3 class="hero__slogan">Крем-брюле и пломбир с малиновым джемом</h3>
+            <a class="button button--big" href="#">Давайте оба!</a>
+          </div>
+          <div class="general-slider__item general-slider__item--2 flex flex--column flex--center visually-hidden">
+            <h3 class="hero__slogan">Шоколадный пломбир и лимонный сорбет</h3>
+            <a class="button button--big" href="#">Давайте оба!</a>
+          </div>
+          <div class="general-slider__item general-slider__item--3 flex flex--column flex--center visually-hidden">
+            <h3 class="hero__slogan">Пломбир с помадкой и клубничный щербет</h3>
+            <a class="button button--big" href="#">Давайте оба!</a>
+          </div>
         </div>
-        <div class="general-slider__item general-slider__item--3">
-          <h3 class="hero__slogan">Пломбир с помадкой и клубничный щербет</h3>
-          <a class="button button--big" href="#">Давайте оба!</a>
-        </div>
-      </div>
-      <div class="slider-control">
-        <button class="button button--slider-active" type="button" name="slider-control-1">1</button>
-        <button class="button button--slider" type="button" name="slider-control-2">2</button>
-        <button class="button button--slider" type="button" name="slider-control-3">3</button>
       </div>
     </section>
 
