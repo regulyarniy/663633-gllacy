@@ -70,75 +70,77 @@
   </header>
 
   <main class="main">
-    <!-- Хлебные крошки -->
-    <nav class="breadcrumbs">
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="index.html">Главная</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Каталог</a>
-        </li>
-        <li class="breadcrumbs__item">
-          Сливочное
-        </li>
-      </ul>
-    </nav>
+    <div class="container flex flex--column">
+      <!-- Хлебные крошки -->
+      <nav class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Каталог</a>
+          </li>
+          <li class="breadcrumbs__item">
+            Сливочное
+          </li>
+        </ul>
+      </nav>
 
-    <h1 class="main__title">Сливочное мороженое</h1>
+      <h1 class="main__title">Сливочное мороженое</h1>
 
-    <section class="filter">
-      <!-- Фильтр -->
-      <h2 class="visually-hidden">Фильтр товаров</h2>
-      <form class="filter__form" action="https://echo.htmlacademy.ru" method="post">
-        <!-- Выпадающий список -->
-        <label class="filter__label" for="filter-sort">Сортировка:</label>
-        <select class="filter__select" name="filter-sort" id="filter-sort">
+      <section class="filter">
+        <!-- Фильтр -->
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <form class="filter__form" action="https://echo.htmlacademy.ru" method="post">
+          <!-- Выпадающий список -->
+          <label class="filter__label" for="filter-sort">Сортировка:</label>
+          <select class="filter__select" name="filter-sort" id="filter-sort">
           <option class="filter__option">по популярности</option>
           <option class="filter__option">сначала недорогие</option>
           <option class="filter__option">сначала дорогие</option>
           <option class="filter__option">по жирности</option>
         </select>
-        <!-- Ползунок -->
-        <!-- Сделать несколько ползунков - https://codepen.io/sakamies/pen/qOEGLJ -->
-        <label class="filter__label" for="filter-price">
+          <!-- Ползунок -->
+          <!-- Сделать несколько ползунков - https://codepen.io/sakamies/pen/qOEGLJ -->
+          <label class="filter__label" for="filter-price">
           Цена:
           <span class="filter__range-start" id="filter-range-start">100</span>
           руб. -
           <span class="filter__range-end" id="filter-range-end">500</span>
           руб.
         </label>
-        <input class="filter__range" type="range" name="filter-price" id="filter-price" min="0" max="800" value="100" step="100">
-        <!-- Радиокнопки -->
-        <label class="filter__label" for="filter-fat2">Жирность:</label>
-        <div class="filter__item">
-          <input class="filter__radio" type="radio" id="filter-fat1" name="filter-fat" value="0%">
-          <label class="filter__label filter__label--big" for="filter-fat1">0%</label>
-          <input class="filter__radio" type="radio" id="filter-fat2" name="filter-fat" value="до 10%" checked>
-          <label class="filter__label filter__label--big" for="filter-fat2">до 10%</label>
-          <input class="filter__radio" type="radio" id="filter-fat3" name="filter-fat" value="до 30%">
-          <label class="filter__label filter__label--big" for="filter-fat3">до 30%"</label>
-          <input class="filter__radio" type="radio" id="filter-fat4" name="filter-fat" value="выше 30%">
-          <label class="filter__label filter__label--big" for="filter-fat4">выше 30%"</label>
-        </div>
-        <!-- Чекбоксы -->
-        <label class="filter__label" for="filter-filler3">Наполнители:</label>
-        <div class="filter__item">
-          <input class="filter__checkbox" type="checkbox" id="filter-filler1" name="filter-filler" value="шоколадные" checked>
-          <label class="filter__label filter__label--big" for="filter-filler1">шоколадные</label>
-          <input class="filter__checkbox" type="checkbox" id="filter-filler2" name="filter-filler" value="сахарные присыпки" checked>
-          <label class="filter__label filter__label--big" for="filter-filler2">сахарные присыпки</label>
-          <input class="filter__checkbox" type="checkbox" id="filter-filler3" name="filter-filler" value="фрукты" checked>
-          <label class="filter__label filter__label--big" for="filter-filler3">фрукты</label>
-          <input class="filter__checkbox" type="checkbox" id="filter-filler4" name="filter-filler" value="сиропы">
-          <label class="filter__label filter__label--big" for="filter-filler4">сиропы</label>
-          <input class="filter__checkbox" type="checkbox" id="filter-filler5" name="filter-filler" value="джемы">
-          <label class="filter__label filter__label--big" for="filter-filler5">джемы</label>
-        </div>
-        <!-- Кнопка Применить -->
-        <input class="button button--filter" type="submit" name="filter-button" value="Применить">
-      </form>
-    </section>
+          <input class="filter__range" type="range" name="filter-price" id="filter-price" min="0" max="800" value="100" step="100">
+          <!-- Радиокнопки -->
+          <label class="filter__label" for="filter-fat2">Жирность:</label>
+          <div class="filter__item">
+            <input class="filter__radio" type="radio" id="filter-fat1" name="filter-fat" value="0%">
+            <label class="filter__label filter__label--big" for="filter-fat1">0%</label>
+            <input class="filter__radio" type="radio" id="filter-fat2" name="filter-fat" value="до 10%" checked>
+            <label class="filter__label filter__label--big" for="filter-fat2">до 10%</label>
+            <input class="filter__radio" type="radio" id="filter-fat3" name="filter-fat" value="до 30%">
+            <label class="filter__label filter__label--big" for="filter-fat3">до 30%"</label>
+            <input class="filter__radio" type="radio" id="filter-fat4" name="filter-fat" value="выше 30%">
+            <label class="filter__label filter__label--big" for="filter-fat4">выше 30%"</label>
+          </div>
+          <!-- Чекбоксы -->
+          <label class="filter__label" for="filter-filler3">Наполнители:</label>
+          <div class="filter__item">
+            <input class="filter__checkbox" type="checkbox" id="filter-filler1" name="filter-filler" value="шоколадные" checked>
+            <label class="filter__label filter__label--big" for="filter-filler1">шоколадные</label>
+            <input class="filter__checkbox" type="checkbox" id="filter-filler2" name="filter-filler" value="сахарные присыпки" checked>
+            <label class="filter__label filter__label--big" for="filter-filler2">сахарные присыпки</label>
+            <input class="filter__checkbox" type="checkbox" id="filter-filler3" name="filter-filler" value="фрукты" checked>
+            <label class="filter__label filter__label--big" for="filter-filler3">фрукты</label>
+            <input class="filter__checkbox" type="checkbox" id="filter-filler4" name="filter-filler" value="сиропы">
+            <label class="filter__label filter__label--big" for="filter-filler4">сиропы</label>
+            <input class="filter__checkbox" type="checkbox" id="filter-filler5" name="filter-filler" value="джемы">
+            <label class="filter__label filter__label--big" for="filter-filler5">джемы</label>
+          </div>
+          <!-- Кнопка Применить -->
+          <input class="button button--filter" type="submit" name="filter-button" value="Применить">
+        </form>
+      </section>
+    </div>
 
     <section class="products products--catalog">
       <!-- Список товаров -->

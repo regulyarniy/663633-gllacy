@@ -554,13 +554,21 @@ a {
 
 .breadcrumbs {
   display: inline;
+  margin-right: auto;
+  margin-bottom: 9px;
 }
 
 .breadcrumbs__list,
 .breadcrumbs__item {
   display: inline;
+  margin: 0;
+  padding: 0;
 
   list-style: none;
+}
+
+.breadcrumbs__item {
+  margin-right: 22px;
 }
 
 .breadcrumbs__item,
@@ -577,7 +585,7 @@ a {
   content: "\00BB";
   position: absolute;
   top: 2px;
-  right: -5px;
+  right: -15px;
 }
 
 /* .breadcrumbs__link--active,
@@ -597,6 +605,11 @@ a {
   */
 
 .main__title {
+  margin: 0;
+  margin-bottom: 33px;
+  padding: 0
+  margin-right: auto;
+
   font-weight: 700;
   font-size: 35px;
   line-height: 41px;
@@ -680,6 +693,11 @@ a {
   */
 
 .filter {
+  margin: 0;
+  margin-right: auto;
+  margin-bottom: 37px;
+  padding: 0;
+
   color: inherit;
 }
 
