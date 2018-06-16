@@ -1266,8 +1266,9 @@ a {
   background-position: center;
   border-width: 3px;
   border-style: solid;
-  border-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.8);
   border-radius: 19px;
+  opacity: 0.8;
 }
 
 .social__link--twitter {
@@ -1292,41 +1293,15 @@ a {
   border-color: rgba(255, 255, 255, 0.7);
 }
 
-.social__link--twitter:hover,
-.social__link--twitter:focus {
-  background-image: url("../img/social__link--twitter--hover.svg");
+.social__link:hover,
+.social__link:focus {
+  opacity: 1;
 }
 
-.social__link--instagram:hover,
-.social__link--instagram:focus {
-  background-image: url("../img/social__link--instagram--hover.svg");
+.social__link:active {
+  opacity: 0.9;
 }
 
-.social__link--facebook:hover,
-.social__link--facebook:focus {
-  background-image: url("../img/social__link--facebook--hover.svg");
-}
-
-.social__link--vkontakte:hover,
-.social__link--vkontakte:focus {
-  background-image: url("../img/social__link--vkontakte--hover.svg");
-}
-
-.social__link--twitter:active {
-  background-image: url("../img/social__link--twitter--active.svg");
-}
-
-.social__link--instagram:active {
-  background-image: url("../img/social__link--instagram--active.svg");
-}
-
-.social__link--facebook:active {
-  background-image: url("../img/social__link--facebook--active.svg");
-}
-
-.social__link--vkontakte:active {
-  background-image: url("../img/social__link--vkontakte--active.svg");
-}
 
 /* Ссылки подвала============================================================================================================================
 ====================================================================================================================================
