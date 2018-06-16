@@ -44,6 +44,7 @@ a {
 
 .container {
   width: 95.5%;
+  max-width: 1146px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -58,6 +59,10 @@ a {
 
 .flex--center {
   align-items: center;
+}
+
+.flex-end {
+  align-self: flex-end;
 }
 
 /* Фоны и свойства body============================================================================================================================
@@ -853,13 +858,10 @@ a {
 ====================================================================================================================================
   */
 
-.promo {
-  display: flex;
-}
-
 .promo__item {
-  width: 560px;
-  height: 229px;
+  width: 100%;
+  min-height: 229px;
+  padding: 20px;
 
   font-weight: 700;
 
@@ -868,6 +870,8 @@ a {
 }
 
 .promo__item--raspberry {
+  margin-right: 4.5%;
+
   background-color: #851127;
   background-image: url("../img/promo__item--raspberry.jpg");
 }
@@ -877,7 +881,15 @@ a {
   background-image: url("../img/promo__item--chocolate.jpg");
 }
 
+.promo__title,
+.promo__content {
+  margin: 0;
+  padding: 0;
+}
+
 .promo__title {
+  margin-bottom: 23px;
+
   font-size: 35px;
   line-height: 41px;
 }
@@ -886,6 +898,7 @@ a {
   font-size: 18px;
   line-height: 22px;
 }
+
 
 /* Популярные товары============================================================================================================================
 ====================================================================================================================================
