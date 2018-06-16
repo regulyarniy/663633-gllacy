@@ -215,6 +215,10 @@ a {
   background-repeat: repeat-x;
   background-position: 0 bottom;
   background-size: 1px 1px;
+
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  transition-property: all;
 }
 
 .links__link:hover,
@@ -299,6 +303,10 @@ a {
   background-position: 14px 24px;
   background-size: calc(100% - 28px) 1px;
   border-radius: 15px;
+
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  transition-property: all;
 }
 
 .main-nav__link--active {
@@ -1003,6 +1011,10 @@ a {
   background-repeat: repeat-x;
   background-position: 0 bottom;
   background-size: 1px 2px;
+
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  transition-property: all;
 }
 
 .blog__link:hover,
