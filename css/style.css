@@ -1068,8 +1068,8 @@ a {
   */
 
 .advantages {
-  width: 1146px;
-  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 21px;
 
   font-weight: 400;
   font-size: 16px;
@@ -1083,6 +1083,9 @@ a {
 }
 
 .advantages__lead {
+  margin: 0;
+  padding: 0;
+
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
@@ -1090,16 +1093,18 @@ a {
 
 .advantages__list,
 .advantages__item {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
-.advantages__list {
-  display: flex;
-}
-
 .advantages__item {
+  max-width: 50%;
+  padding-left: 57px;
+
   background-repeat: no-repeat;
-  background-position: -20px -10px;
+  background-position: 0 0;
 }
 
 .advantages__item--ice-cream {
@@ -1118,29 +1123,43 @@ a {
   background-image: url("../img/advantages__item--thermo.svg");
 }
 
+.advantages_content {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+
 /* Новости============================================================================================================================
 ====================================================================================================================================
 ====================================================================================================================================
   */
 
-.news,
-.blog {
-  width: 560px;
-  height: 220px;
+.news {
+  width: 100%;
+  min-height: 220px;
+  margin-right: 2.5%;
+  margin-bottom: 40px;
+  padding: 20px;
 
   color: #323232;
 
   background-color: #ffffff;
+  background-image: url("../img/blog.jpg");
+  background-repeat: no-repeat;
+  background-position: -50px -220px;
   border-radius: 12px;
 }
 
 .blog {
-  background-image: url("../img/blog.jpg");
-  background-repeat: no-repeat;
-  background-position: -50px -220px;
+  margin: 0;
+  padding: 0;
 }
 
 .blog__title {
+  margin: 0;
+  margin-bottom: 9px;
+  padding: 0;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -1148,6 +1167,9 @@ a {
 
 .blog__link {
   display: inline;
+  max-width: 280px;
+  margin: 0;
+  padding: 0;
 
   font-weight: 700;
   font-size: 24px;
@@ -1179,8 +1201,9 @@ a {
   */
 
 .subscribe {
-  width: 560px;
-  height: 221px;
+  width: 100%;
+  min-height: 220px;
+  margin-bottom: 40px;
 
   font-weight: 400;
   font-size: 16px;
@@ -1194,20 +1217,37 @@ a {
   border-radius: 12px;
 }
 
-.subscribe-form {
-  position: absolute;
+.subscribe__content {
+  margin: 0;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  padding: 0;
+  padding-top: 30px;
+}
 
-  width: 550px;
-  height: 211px;
+.subscribe-form {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  margin: 0;
   margin-top: 5px;
   margin-left: 5px;
+  padding: 0;
 
   background-color: #f8f7f4;
   border-radius: 12px;
 }
 
 .subscribe-form__input {
-  width: 368px;
+  width: 61%;
+  margin: 0;
+  margin-right: 5px;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.subscribe-form .button--primary {
+  padding-right: 17px;
+  padding-left: 17px;
 }
 
 /* Пагинация============================================================================================================================
