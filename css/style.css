@@ -49,6 +49,11 @@ a {
   margin-left: auto;
 }
 
+.container--products {
+  width: 97.75%;
+  max-width: 1173px;
+}
+
 .flex {
   display: flex;
 }
@@ -61,9 +66,22 @@ a {
   align-items: center;
 }
 
+.flex--between {
+  justify-content: space-between;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  align-self: center;
+}
+
 .flex-end {
   align-self: flex-end;
 }
+
 
 /* Фоны и свойства body============================================================================================================================
 ====================================================================================================================================
@@ -554,6 +572,7 @@ a {
   font-weight: 700;
   font-size: 22px;
   line-height: 24px;
+  text-decoration: none;
 }
 
 /* Хлебные крошки============================================================================================================================
@@ -597,16 +616,6 @@ a {
   right: -15px;
 }
 
-/* .breadcrumbs__link--active,
-.breadcrumbs__link--active:hover,
-.breadcrumbs__link--active:focus,
-.breadcrumbs__link--active:active {
-  background-image: none;
-}
-
-.breadcrumbs__link--active::after {
-  content: none;
-} */
 
 /* Основной контент============================================================================================================================
 ====================================================================================================================================
@@ -634,32 +643,34 @@ a {
 .hero {
   position: relative;
 
-  margin-bottom: 37px;
+  margin-bottom: 45px;
 }
 
 .general-slider {
-  width: 670px;
+  width: 675px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .general-slider__item {
-  padding-top: 282px;
+  padding-top: 270px;
 }
 
 .hero__slogan {
+  max-width: 100%;
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 30px;
   padding: 0;
 
   font-weight: 700;
   font-size: 60px;
   line-height: 60px;
+  text-align: center;
 }
 
 .slider-control {
   position: absolute;
-  top: 450px;
+  top: 440px;
 
   display: flex;
   margin-right: auto;
@@ -705,7 +716,7 @@ a {
 .filter {
   margin: 0;
   margin-right: auto;
-  margin-bottom: 37px;
+  margin-bottom: 40px;
   padding: 0;
 
   color: inherit;
@@ -857,7 +868,9 @@ a {
 ====================================================================================================================================
 ====================================================================================================================================
   */
-
+.promo {
+  margin-bottom: 40px;
+}
 .promo__item {
   width: 100%;
   min-height: 229px;
@@ -870,7 +883,7 @@ a {
 }
 
 .promo__item--raspberry {
-  margin-right: 4.5%;
+  margin-right: 3%;
 
   background-color: #851127;
   background-image: url("../img/promo__item--raspberry.jpg");
@@ -895,6 +908,8 @@ a {
 }
 
 .promo__content {
+  margin-bottom: auto;
+
   font-size: 18px;
   line-height: 22px;
 }
@@ -905,19 +920,27 @@ a {
 ====================================================================================================================================
   */
 
-.products_list,
+.products__list,
 .products__item {
-  max-width: 267px;
+  margin: 0;
+  padding: 0;
 
   list-style: none;
 }
 
-.products__list {
-  display: flex;
+.products__item {
+  position: relative;
+
+  width: 24%;
+  margin: 0;
+  margin-right: 1%;
+  padding: 0;
+
+  border-radius: 5px;
 }
 
-.products__item {
-  border-radius: 5px;
+.products__item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .products__item:hover,
@@ -926,13 +949,12 @@ a {
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-.products__item:hover > .visually-hidden.button--primary,
+/* .products__item:hover > .visually-hidden.button--primary,
 .products__item:focus > .visually-hidden.button--primary {
-  position: static;
+  position: relative;
 
   width: auto;
   height: 46px;
-  margin: 0;
   padding-top: 11px;
   padding-right: 24px;
   padding-bottom: 11px;
@@ -945,7 +967,7 @@ a {
 
   clip: none;
   clip-path: none;
-}
+} */
 
 .products__link,
 .products__title {
@@ -955,7 +977,19 @@ a {
   color: #ffffff;
 }
 
+.products__link {
+  max-width: 100%;
+  margin-bottom: 13px;;
+}
+
+.products__title {
+  vertical-align: top;
+  text-align: center;
+}
+
 .products__icon {
+  position: absolute;
+
   display: inline-block;
   width: 61px;
   height: 61px;
@@ -967,22 +1001,43 @@ a {
 }
 
 .products__image {
-  max-width: 267px;
-  max-height: 267px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 13px;
 
   border-radius: 50%;
 }
 
-.products__price {
+.products__price,
+.products__kg {
   font-weight: 700;
-  font-size: 45px;
   line-height: 45px;
 }
 
+.products__wrapper {
+  position: absolute;
+  bottom: 175px;
+  left: 4.5%;
+}
+
+.products__price {
+  font-size: 45px;
+}
+
 .products__kg {
-  font-weight: 700;
   font-size: 30px;
-  line-height: 45px;
+}
+
+.products__item .button {
+  margin-bottom: 5%;
+
+  opacity: 0;
+}
+
+.products__item:hover .button,
+.products__item:focus .button,
+.products__item .button:focus {
+  opacity: 1;
 }
 
 /* Наши преимущества============================================================================================================================
