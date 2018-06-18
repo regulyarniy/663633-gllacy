@@ -54,6 +54,10 @@ a {
   max-width: 1173px;
 }
 
+.relative {
+  position: relative;
+}
+
 .flex {
   display: flex;
 }
@@ -597,9 +601,11 @@ a {
   */
 
 .breadcrumbs {
+  position: absolute;
+  top: -22px;
+
   display: inline;
   margin-right: auto;
-  margin-bottom: 9px;
 }
 
 .breadcrumbs__list,
@@ -609,10 +615,6 @@ a {
   padding: 0;
 
   list-style: none;
-}
-
-.breadcrumbs__item {
-  margin-right: 22px;
 }
 
 .breadcrumbs__item,
@@ -625,11 +627,20 @@ a {
   color: inherit;
 }
 
+.breadcrumbs__item {
+  margin-right: 18px;
+}
+
+.breadcrumbs__link {
+  margin: 0;
+  padding: 0;
+}
+
 .breadcrumbs__link::after {
   content: "\00BB";
   position: absolute;
-  top: 2px;
-  right: -15px;
+  top: 0;
+  right: -12px;
 }
 
 
