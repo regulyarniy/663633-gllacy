@@ -651,9 +651,9 @@ a {
 
 .main__title {
   margin: 0;
-  margin-bottom: 33px;
-  padding: 0
   margin-right: auto;
+  margin-bottom: 25px;
+  padding: 0;
 
   font-weight: 700;
   font-size: 35px;
@@ -750,14 +750,31 @@ a {
 }
 
 .filter__form {
-  max-width: 879px;
+  max-width: 860px;
 }
 
 .filter__label {
+  margin-bottom: 6px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   color: inherit;
+}
+
+.filter__label:first-child {
+  padding-left: 16px;
+}
+
+.filter__label--big {
+  margin-right: 20px;
+
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.filter__label--checkbox {
+  margin-top: 16px;
 }
 
 .filter__select,
@@ -769,9 +786,8 @@ a {
 
   background-color: rgba(255, 255, 255, 0.2);
 }
-
 .filter__select {
-  border-radius: 15px;
+  width: 193px;
 }
 
 .filter__select:hover,
@@ -789,9 +805,28 @@ a {
 }
 
 .filter__range,
-.filter__item {
+.filter__item,
+.filter__select {
+  height: 36px;
+
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
+}
+
+.filter__item {
+  padding-left: 16px;
+}
+
+.filter__item--fat {
+  width: 415px;
+}
+
+.filter__item--filler {
+  width: 700px;
+}
+
+.filter__range {
+  width: 218px;
 }
 
 .filter__range:hover,
@@ -801,8 +836,12 @@ a {
 }
 
 .filter__radio {
-  width: 22px;
-  height: 22px;
+  width: 21px;
+  height: 21px;
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 0;
 
   background-color: transparent;
   border-width: 2px;
@@ -824,6 +863,8 @@ a {
 .filter__checkbox {
   width: 22px;
   height: 22px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 
   background-color: transparent;
   border-color: #ffffff;
@@ -848,6 +889,7 @@ a {
 .button--filter {
   display: inline-block;
   height: 36px;
+  margin-top: auto;
   padding-top: 7px;
   padding-right: 27px;
   padding-bottom: 7px;
