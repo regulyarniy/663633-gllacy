@@ -1312,10 +1312,17 @@ a {
   */
 
 .pagination {
+  padding-bottom: 30px;
+
   color: inherit;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .pagination__list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -1323,6 +1330,14 @@ a {
   position: relative;
 
   margin-left: 10px;
+}
+
+.pagination__item:first-child {
+  margin-left: auto;
+}
+
+.pagination__item:last-child {
+  margin-right: 5px;
 }
 
 .pagination__link {
