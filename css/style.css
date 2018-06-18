@@ -1026,6 +1026,7 @@ a {
 .products__quickview {
   position: absolute;
   bottom: -60px;
+  left: 0;
   z-index: 1;
 
   width: 100%;
