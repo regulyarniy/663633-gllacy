@@ -19,7 +19,7 @@
       <img class="general-header__logo" src="img/general-header__logo.svg" alt="Глейси" width="155" height="65" />
       <!-- Главное меню -->
       <nav class="main-nav">
-        <ul class="main-nav__menu">
+        <ul class="main-nav__menu flex">
           <li class="main-nav__item">
             <a class="main-nav__link" href="#">Каталог</a>
             <ul class="main-nav__submenu">
@@ -234,52 +234,59 @@
 
   <footer class="general-footer">
     <!-- Подвал -->
-    <ul class="social">
-      <li class="social__item">
-        <a class="social__link social__link--twitter" href="#">Twitter</a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--instagram" href="#">Instagram</a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href="#">Facebook</a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--vkontakte" href="#">Vkontakte</a>
-      </li>
-    </ul>
-    <nav class="general-footer__nav">
-      <ul class="links">
-        <li class="links__item">
-          <a class="links__link links__link--like" href="#">Для поставщиков</a>
+    <div class="container flex flex--between">
+      <ul class="social flex">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#">Twitter</a>
         </li>
-        <li class="links__item">
-          <a class="links__link" href="#">Наши документы</a>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#">Instagram</a>
         </li>
-        <li class="links__item">
-          <a class="links__link" href="#">О производстве</a>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#">Facebook</a>
         </li>
-        <li class="links__item">
-          <a class="links__link" href="#">Экологические стандарты</a>
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="#">Vkontakte</a>
         </li>
       </ul>
-    </nav>
-    <p class="copyright">
-      <a class="copyright__link copyright__link--img" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img class="copyright__logo" src="img/copyright__logo.svg" alt="HTML Academy" width="108" height="39">
-      </a>Сделано в
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
-    </p>
+      <nav class="general-footer__nav">
+        <ul class="links flex flex--wrap">
+          <li class="links__item">
+            <a class="links__link links__link--like" href="#">Для поставщиков</a>
+          </li>
+          <li class="links__item">
+            <a class="links__link" href="#">Наши документы</a>
+          </li>
+          <li class="links__item">
+            <a class="links__link" href="#">О производстве</a>
+          </li>
+          <li class="links__item">
+            <a class="links__link" href="#">Экологические стандарты</a>
+          </li>
+        </ul>
+      </nav>
+      <p class="copyright">
+        <a class="copyright__link copyright__link--img" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img class="copyright__logo" src="img/copyright__logo.svg" alt="HTML Academy" width="108" height="39">
+        </a>
+        <span class="flex">
+          Сделано в
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
+        </span>
+      </p>
+    </div>
+
+
     <!-- Формы -->
     <!-- Форма поиска -->
-    <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+    <form class="search-form visually-hidden" action="https://echo.htmlacademy.ru" method="post">
       <h3 class="visually-hidden">Форма поиска</h3>
       <label class="visually-hidden" for="search-input">Поиск:</label>
       <input class="search-form__input" type="text" name="search-input" id="search-input" placeholder="Что ищем?">
       <button class="button button--primary visually-hidden" type="submit" name="search-submit" tabindex="-1">Найти</button>
     </form>
     <!-- Форма логина -->
-    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+    <form class="login-form visually-hidden" action="https://echo.htmlacademy.ru" method="post">
       <h3 class="visually-hidden">Форма входа</h3>
       <label class="visually-hidden" for="email-input">Электронная почта:</label>
       <input class="login-form__input" type="text" name="email-input" id="email-input" placeholder="Электронная почта">
@@ -290,7 +297,7 @@
       <a class="login-form__link" href="#">Новая регистрация</a>
     </form>
     <!-- Корзина -->
-    <form class="cart" action="https://echo.htmlacademy.ru" method="post">
+    <form class="cart visually-hidden" action="https://echo.htmlacademy.ru" method="post">
       <h3 class="visually-hidden">Корзина</h3>
       <table class="cart__products">
         <tr class="cart__row visually-hidden">
@@ -331,7 +338,7 @@
     </form>
     <!-- Форма обратной связи -->
 
-    <section class="feedback modal">
+    <section class="feedback modal visually-hidden">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <button class="button button--remove button--modal-close" type="button" name="modal-close">Закрыть</button>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">

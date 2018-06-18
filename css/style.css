@@ -334,8 +334,6 @@ a {
 .main-nav__menu {
   position: relative;
 
-  display: flex;
-
   line-height: 18px;
 }
 
@@ -464,7 +462,6 @@ a {
   */
 
 .user-interface {
-  display: flex;
   margin: 0;
   margin-top: 14px;
   margin-left: auto;
@@ -686,7 +683,6 @@ a {
   position: absolute;
   top: 445px;
 
-  display: flex;
   margin-right: auto;
 }
 
@@ -1204,6 +1200,7 @@ a {
   width: 100%;
   min-height: 220px;
   margin-bottom: 40px;
+  padding: 5px;
 
   font-weight: 400;
   font-size: 16px;
@@ -1226,11 +1223,8 @@ a {
 }
 
 .subscribe-form {
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
+  min-height: 100%;
   margin: 0;
-  margin-top: 5px;
-  margin-left: 5px;
   padding: 0;
 
   background-color: #f8f7f4;
@@ -1241,6 +1235,7 @@ a {
   width: 61%;
   margin: 0;
   margin-right: 5px;
+  margin-bottom: 30px;
   margin-left: 20px;
   padding: 0;
 }
@@ -1263,8 +1258,6 @@ a {
 }
 
 .pagination__list {
-  display: flex;
-
   list-style: none;
 }
 
@@ -1460,17 +1453,27 @@ a {
 ====================================================================================================================================
 ====================================================================================================================================
   */
+.general-footer {
+  min-height: 85px;
+  margin-top: 16px;
+}
 
 .social,
 .social__item,
 .links,
 .links__item {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
-.social,
-.links {
-  display: flex;
+.social {
+  margin-top: 18px;
+}
+
+.social__item {
+  margin-right: 11px;
 }
 
 .social__link {
@@ -1526,10 +1529,19 @@ a {
 ====================================================================================================================================
  */
 
+.general-footer__nav {
+  width: 330px;
+  margin-top: 18px;
+}
+
 .links,
 .links__item,
 .links__link {
   color: inherit;
+}
+
+.links__item {
+  width: 50%;
 }
 
 .links__link {
@@ -1561,9 +1573,17 @@ a {
 
 .copyright,
 .copyright__link {
+  margin: 0;
+  padding: 0;
+
   font-size: 12px;
   line-height: 18px;
   color: #fefefe;
+}
+
+.copyright__link {
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .copyright__link--img,
@@ -1576,6 +1596,7 @@ a {
 .copyright__logo {
   width: 108px;
   height: 39px;
+  margin-bottom: 5px;
 }
 
 /* Скрытые формы ============================================================================================================================
