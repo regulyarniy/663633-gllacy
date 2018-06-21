@@ -1641,7 +1641,7 @@ a {
 }
 
 .social {
-  margin-top: 18px;
+  margin-top: 17px;
 }
 
 .social__item {
@@ -1702,8 +1702,8 @@ a {
  */
 
 .general-footer__nav {
-  width: 330px;
-  margin-top: 18px;
+  width: 310px;
+  margin-top: 12px;
 }
 
 .links,
@@ -1713,7 +1713,11 @@ a {
 }
 
 .links__item {
-  width: 50%;
+  width: 145px;
+}
+
+.links__item:nth-child(even) {
+  width: 165px;
 }
 
 .links__link {
@@ -1728,14 +1732,18 @@ a {
 }
 
 .links__link--like::before {
-  content: "\2764";
+  /* content: "\2764"; */
+  content: "";
   position: absolute;
-  top: 0;
-  left: -15px;
+  top: 3px;
+  left: -18px;
+
+  width: 15px;
+  height: 13px;
 
   font-weight: 400;
 
-  background-image: none;
+  background-image: url("../img/links__link--like.svg");
 }
 
 /* Копирайт в подвале============================================================================================================================
@@ -1758,6 +1766,10 @@ a {
   margin-left: 5px;
 }
 
+.copyright__text {
+  padding-left: 5px;
+}
+
 .copyright__link--img,
 .copyright__link--img:hover,
 .copyright__link--img:focus,
@@ -1768,7 +1780,6 @@ a {
 .copyright__logo {
   width: 108px;
   height: 39px;
-  margin-bottom: 5px;
 }
 
 /* Скрытые формы ============================================================================================================================
