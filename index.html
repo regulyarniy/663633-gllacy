@@ -212,7 +212,9 @@
         <h2 class="visually-hidden">Наши новости</h2>
         <article class="blog">
           <h3 class="blog__title">Новое в нашем блоге</h3>
-          <a class="blog__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+          <div class="blog__wrapper">
+            <a class="blog__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+          </div>
         </article>
       </section>
 
@@ -221,9 +223,11 @@
         <h2 class="visually-hidden">Подписаться на рассылку</h2>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
           <p class="subscribe__content">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-          <label class="visually-hidden" for="subscribe-email-input">Электронная почта:</label>
-          <input class="subscribe-form__input" type="text" name="subscribe-email-input" id="subscribe-email-input" placeholder="Электронная почта">
-          <button class="button button--primary" type="submit" name="subscribe-button">Отправить</button>
+          <div class="flex">
+            <label class="visually-hidden" for="subscribe-email-input">Электронная почта:</label>
+            <input class="subscribe-form__input" type="text" name="subscribe-email-input" id="subscribe-email-input" placeholder="Электронная почта">
+            <button class="button button--primary" type="submit" name="subscribe-button">Отправить</button>
+          </div>
         </form>
       </section>
 
