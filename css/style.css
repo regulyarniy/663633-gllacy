@@ -49,6 +49,10 @@ a {
   margin-left: auto;
 }
 
+.container--slider {
+  width: 100%;
+}
+
 .container--products {
   width: 97.75%;
   max-width: 1173px;
@@ -97,6 +101,7 @@ a {
   */
 
 .general-body {
+  width: auto;
   min-width: 900px;
   margin: 0;
   padding: 0;
@@ -109,24 +114,47 @@ a {
   color: #ffffff;
 
   background-color: #849d8f;
+}
+
+.general-body--bg1 {
+  background-color: #849d8f;
+}
+
+.general-body--bg2 {
+  background-color: #8996a6;
+}
+
+.general-body--bg3 {
+  background-color: #9d8b84;
+}
+
+.general-body__sliderbg {
+  position: absolute;
+  top: -9px;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  min-height: 900px;
+
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center top;
 }
 
-.general-body__slider1 {
-  background-color: #849d8f;
+.general-body__sliderbg--1 {
   background-image: url("../img/general-slider__item--1.png");
 }
 
-.general-body__slider2 {
-  background-color: #8996a6;
+.general-body__sliderbg--2 {
   background-image: url("../img/general-slider__item--2.png");
 }
 
-.general-body__slider3 {
-  background-color: #9d8b84;
+.general-body__sliderbg--3 {
   background-image: url("../img/general-slider__item--3.png");
 }
+
+
 
 /* Основные кнопки============================================================================================================================
 ====================================================================================================================================
@@ -340,6 +368,7 @@ a {
   font-size: 0;
   line-height: 0;
 }
+
 .general-header__logo {
   width: 155px;
   height: 65px;
@@ -711,6 +740,10 @@ a {
   position: relative;
 
   margin-bottom: 40px;
+}
+
+.hero .container {
+  position: relative;
 }
 
 .general-slider {
