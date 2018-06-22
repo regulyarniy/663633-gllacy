@@ -94,44 +94,9 @@
             <span class="cart-counter">Пусто</span>
           </a>
           <!-- Корзина -->
-          <form class="cart" action="https://echo.htmlacademy.ru" method="post">
+          <form class="cart cart--empty flex flex--column" action="https://echo.htmlacademy.ru" method="post">
             <h3 class="visually-hidden">Корзина</h3>
-            <table class="cart__products">
-              <tr class="cart__row visually-hidden">
-                <th class="cart__col-header">Удалить товар</th>
-                <th class="cart__col-header">Изображение товара</th>
-                <th class="cart__col-header">Наименование товара</th>
-                <th class="cart__col-header">Количество (вес)</th>
-                <th class="cart__col-header">Цена</th>
-                <th class="cart__col-header">Стоимость</th>
-              </tr>
-              <tr class="cart__row">
-                <td class="cart__td">
-                  <button class="button button--remove" type="button" name="cart-button-remove" id="cart-button-remove-1" tabindex="-1">Удалить</button>
-                </td>
-                <td class="cart__td">
-                  <img class="cart__image" src="img/cart__orange.jpg" alt="Апельсиновый джем" width="35" height="35" />
-                </td>
-                <td class="cart__td cart__name">Пломбир с апельсиновым джемом</td>
-                <td class="cart__td cart__quantity">1,5 кг х</td>
-                <td class="cart__td cart__price">200 руб</td>
-                <td class="cart__td cart__subtotal">300 руб</td>
-              </tr>
-              <tr class="cart__row">
-                <td class="cart__td">
-                  <button class="button button--remove" type="button" name="cart-button-remove" id="cart-button-remove-2" tabindex="-1">Удалить</button>
-                </td>
-                <td class="cart__td">
-                  <img class="cart__image" src="img/cart__strawberry.jpg" alt="Клубника с белым шоколадом" width="35" height="35" />
-                </td>
-                <td class="cart__td cart__name">Клубничный пломбир с присыпкой из белого шоколада</td>
-                <td class="cart__td cart__quantity">1,5 кг х</td>
-                <td class="cart__td cart__price">300 руб</td>
-                <td class="cart__td cart__subtotal">450 руб</td>
-              </tr>
-            </table>
-            <b class="cart__total">Итого: 750 руб.</b>
-            <button class="button button--primary" type="submit" name="cart-button" tabindex="-1">Оформить заказ</button>
+            <button class="button button--primary" type="submit" name="cart-button" tabindex="-1" disabled>Корзина пуста</button>
           </form>
         </div>
       </div>
