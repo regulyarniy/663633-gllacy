@@ -309,23 +309,19 @@ a {
 .breadcrumbs__link,
 .login-form__link {
   border-bottom: 1px solid rgba(255,255,255,0.2);
-  /* display: inline;
-  background-image: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.2) 50%);
-  background-repeat: repeat-x;
-  background-position: 0 bottom;
-  background-size: 1px 1px; */
 
   transition: all 0.3s ease-in-out;
 }
 
+.login-form__link,
 .blog__link {
-  border-bottom-width: 2px;
   border-bottom-color: rgba(50, 50, 50, 0.2);
 }
 
-.blog__link:hover,
-.blog__link:focus,
-.blog__link:active,
+.blog__link {
+  border-bottom-width: 2px;
+}
+
 .links__link:hover,
 .links__link:focus,
 .links__link:active,
@@ -337,20 +333,21 @@ a {
 .copyright__link:active,
 .breadcrumbs__link:hover,
 .breadcrumbs__link:focus,
-.breadcrumbs__link:active,
-.login-form__link:hover,
-.login-form__link:focus,
-.login-form__link:active {
+.breadcrumbs__link:active {
   color: #ffbc9e;
 
   border-bottom-color: rgba(232,77,55,0.2);
-  /* background-image: linear-gradient(to right, rgba(232,77,55,0.2), rgba(232,77,55,0.2) 50%); */
 }
 
+.login-form__link:hover,
+.login-form__link:focus,
+.login-form__link:active,
 .blog__link:hover,
 .blog__link:focus,
 .blog__link:active {
   color: #e84d37;
+
+  border-bottom-color: rgba(232,77,55,0.2);
 }
 
 .main-nav__link:hover::before,
@@ -582,10 +579,16 @@ a {
   padding: 0;
 }
 
+.user-interface__wrapper {
+  position: relative;
+}
+
 .button--interface {
   min-width: 10px;
   height: 32px;
+  margin: 0;
   margin-right: 11px;
+  padding: 0;
   padding-top: 8px;
   padding-right: 16px;
   padding-bottom: 8px;
@@ -601,11 +604,11 @@ a {
   box-shadow: none;
 }
 
-.button--interface:last-child {
+.user-interface__wrapper:last-child .button--interface {
   margin-right: 0;
 }
 
-
+.user-interface__wrapper:hover .button--interface,
 .button--interface:hover,
 .button--interface:focus,
 .button--interface:active,
@@ -630,6 +633,7 @@ a {
 }
 
 .button--search {
+  padding-top: 18px;
   padding-left: 16px;
 
   font-size: 0;
@@ -638,28 +642,34 @@ a {
   background-position: center center;
 }
 
-.button--search:hover,
+.user-interface__wrapper:hover .button--search,
 .button--search:focus,
 .button--search:active {
   background-image: url("../img/button--search--hover.svg");
 }
 
-.button--search:hover ~ .search-form {
-  left: 0;
+.user-interface__wrapper:hover .search-form {
+  right: 10px;
+  left: auto;
 }
 
 .button--login {
   background-image: url("../img/button--login.svg");
 }
 
-.button--login:hover,
+.user-interface__wrapper:hover .button--login,
 .button--login:focus,
 .button--login:active {
   background-image: url("../img/button--login--hover.svg");
 }
 
+.user-interface__wrapper:hover .login-form {
+  right: 10px;
+  left: auto;
+}
+
 .button--cart,
-.button--cart:hover,
+.user-interface__wrapper:hover .button--cart,
 .button--cart:focus,
 .button--cart:active {
   color: inherit;
@@ -670,10 +680,15 @@ a {
 }
 
 .button--cart-active,
-.button--cart-active:hover,
+.user-interface__wrapper:hover .button--cart-active,
 .button--cart-active:focus,
 .button--cart-active:active {
   background-image: url("../img/button--cart--full.svg");
+}
+
+.user-interface__wrapper:hover .cart {
+  right: 0;
+  left: auto;
 }
 
 /* Режим работы============================================================================================================================
@@ -1840,22 +1855,32 @@ a {
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
+.search-form,
+.login-form,
+.cart {
+  position: absolute;
+  top: 36px;
+  left: -999em;
+  z-index: 1;
+
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+}
+
 /* Форма поиска ============================================================================================================================
 ====================================================================================================================================
 ====================================================================================================================================
   */
 
 .search-form {
-  position: absolute;
-  top: 0;
-  left: -999em;
-
   width: 341px;
   min-height: 84px;
 }
 
 .search-form__input {
-  width: 315px;
+  width: 100%;
 }
 
 /* Форма логина ============================================================================================================================
@@ -1866,10 +1891,13 @@ a {
 .login-form {
   width: 277px;
   min-height: 214px;
+  padding-right: 19px;
+  padding-left: 19px;
 }
 
 .login-form__input {
-  width: 245px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .login-form__link {
@@ -1877,6 +1905,10 @@ a {
   font-size: 13px;
   line-height: 24px;
   color: inherit;
+}
+
+.login-form .button {
+  margin-right: 19px;
 }
 
 /* Форма корзины  ============================================================================================================================
