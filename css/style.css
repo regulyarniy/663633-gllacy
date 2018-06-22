@@ -173,6 +173,7 @@ a {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+  text-align: center;
   color: #ffffff;
   text-decoration: none;
 
@@ -206,10 +207,10 @@ a {
 
 .button--primary {
   min-width: 24px;
-  height: 46px;
-  padding-top: 11px;
+  height: 44px;
+  padding-top: 10px;
   padding-right: 24px;
-  padding-bottom: 11px;
+  padding-bottom: 10px;
   padding-left: 24px;
 
   font-weight: 700;
@@ -218,6 +219,8 @@ a {
 
   border-radius: 24px;
 }
+
+
 
 .button--big {
   min-width: 40px;
@@ -1114,7 +1117,7 @@ a {
 
   width: 25%;
   /* padding-top: 0.75%; */
-  padding-top: 7px;
+  padding-top: 9px;
   padding-right: 0.5%;
   padding-left: 0.5%;
 
@@ -1344,6 +1347,7 @@ a {
   margin-right: 2.5%;
   margin-bottom: 40px;
   padding: 20px;
+  padding-top: 22px;
 
   color: #323232;
 
@@ -1361,7 +1365,7 @@ a {
 
 .blog__title {
   margin: 0;
-  margin-bottom: 9px;
+  margin-bottom: 4px;
   padding: 0;
 
   font-weight: 500;
@@ -1651,7 +1655,7 @@ a {
 
 .contact-card__caption {
   margin: 0;
-  margin-top: 2px;
+  /* margin-top: 2px; */
   margin-bottom: 22px;
   padding: 0;
 
@@ -1780,7 +1784,7 @@ a {
   content: "";
   position: absolute;
   top: 3px;
-  left: -18px;
+  left: -20px;
 
   width: 15px;
   height: 13px;
