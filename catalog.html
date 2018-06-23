@@ -181,15 +181,16 @@
             </div>
             <div class="flex flex--column">
               <!-- Ползунок -->
-              <!-- Сделать несколько ползунков - https://codepen.io/sakamies/pen/qOEGLJ -->
-              <label class="filter__label" for="filter-price">
-                Цена:
-                <span class="filter__range-start" id="filter-range-start">100</span>
-                руб. -
-                <span class="filter__range-end" id="filter-range-end">500</span>
-                руб.
-              </label>
-              <input class="filter__range" type="range" name="filter-price" id="filter-price" min="0" max="800" value="100" step="100">
+              <p class="filter__label">
+                Цена: <span class="filter__range-start" id="filter-range-start">100</span> руб. -
+                <span class="filter__range-end" id="filter-range-end">500</span> руб.
+              </p>
+              <div class="filter__range-control">
+                <input class="filter__range visually-hidden" type="number" name="filter-range-start" id="filter-range-start" min="0" max="800" value="100" step="100" tabindex="-1">
+                <label class="filter__label" for="filter-range-start" tabindex="0">Мин. цена</label>
+                <input class="filter__range visually-hidden" type="number" name="filter-range-end" id="filter-range-end" min="0" max="800" value="100" step="100" tabindex="-1">
+                <label class="filter__label" for="filter-range-end" tabindex="0">Макс. цена</label>
+              </div>
             </div>
             <div class="flex flex--column">
               <!-- Радиокнопки -->

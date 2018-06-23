@@ -22,7 +22,8 @@ a {
 
 .visually-hidden:not(:focus):not(:active),
 .filter__radio.visually-hidden,
-.filter__checkbox.visually-hidden {
+.filter__checkbox.visually-hidden,
+.filter__range.visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -893,7 +894,9 @@ a {
 }
 
 .filter__label {
+  margin: 0;
   margin-bottom: 6px;
+  padding: 0;
 
   font-weight: 500;
   font-size: 14px;
@@ -931,6 +934,7 @@ a {
   padding-left: 15px;
 
   border: none;
+  cursor: pointer;
 
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -978,7 +982,7 @@ a {
   color: inherit;
 }
 
-.filter__range,
+.filter__range-control,
 .filter__item,
 .filter__select {
   min-height: 36px;
@@ -999,14 +1003,73 @@ a {
   width: 700px;
 }
 
-.filter__range {
+.filter__range-control {
+  position: relative;
+
   width: 218px;
 }
 
-.filter__range:hover,
-.filter__range:focus,
-.filter__range:active {
-  color: inherit;
+.filter__range-control::before,
+.filter__range-control::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  z-index: 1;
+
+  width: 176px;
+  height: 4px;
+
+  background-color: #ffffff;
+  opacity: 0.5;
+}
+
+.filter__range-control::before {
+  opacity: 0.5;
+}
+
+.filter__range-control .filter__label {
+  position: absolute;
+
+  font-size: 0;
+}
+
+.filter__range-control .filter__label::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  z-index: 2;
+
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.filter__range-control::before {
+  /* Положение линейки для JS */
+  /* Левая абцисса: 20 + смещение первого ползунка */
+  /* Длина: смещение первого + смещение второго - начальная абцисса */
+  left: calc(20px + 20px);
+
+  width: calc(20px + 140px - 20px);
+
+  opacity: 1;
+}
+
+.filter__range-control .filter__label[for="filter-range-start"]::before {
+  /* Положение первого ползунка для JS */
+  left: calc(20px + 20px);
+}
+
+.filter__range-control .filter__label[for="filter-range-end"]::before {
+  /* Положение второго ползунка для JS */
+  left: calc(20px + 140px);
 }
 
 .filter__radio {
@@ -1183,7 +1246,6 @@ a {
   position: relative;
 
   width: 25%;
-  /* padding-top: 0.75%; */
   padding-top: 9px;
   padding-right: 0.5%;
   padding-left: 0.5%;
@@ -1192,17 +1254,14 @@ a {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.3s;
-  transition-property: all;
+  transition: all 0.3s ease-in-out;
 }
-
 
 .products__quickview {
   position: absolute;
   bottom: -60px;
   left: 0;
-  z-index: 1;
+  z-index: -1;
 
   width: 100%;
   height: 60px;
@@ -1210,9 +1269,7 @@ a {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.3s;
-  transition-property: all;
+  transition: all 0.3s ease-in-out;
 }
 
 .products__quickview .button {
@@ -1225,6 +1282,8 @@ a {
 .products__item:focus .products__quickview,
 .products__quickview:hover,
 .products__quickview:focus {
+  z-index: 1;
+
   background-color: rgba(255, 255, 255,0.2);
 }
 
