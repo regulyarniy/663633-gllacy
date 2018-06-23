@@ -1334,10 +1334,6 @@ a {
 ====================================================================================================================================
   */
 
-.products {
-  margin-bottom: 25px;
-}
-
 .products__list,
 .products__item {
   margin: 0;
@@ -1346,11 +1342,16 @@ a {
   list-style: none;
 }
 
+.products--catalog .products__list {
+  margin-bottom: 50px;
+}
+
 .products__item {
   position: relative;
   z-index: 1;
 
   width: 25%;
+  margin-bottom: 25px;
   padding-top: 9px;
   padding-right: 0.5%;
   padding-left: 0.5%;
@@ -1360,6 +1361,10 @@ a {
   border-bottom-left-radius: 0;
 
   transition: all 0.2s ease-in-out;
+}
+
+.products--catalog .products__item {
+  margin-bottom: 15px;
 }
 
 .products__quickview {
@@ -1699,7 +1704,7 @@ a {
 .pagination__item {
   position: relative;
 
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .pagination__item:first-child {
@@ -1707,23 +1712,28 @@ a {
 }
 
 .pagination__item:last-child {
-  margin-right: 5px;
+  margin-right: 12px;
 }
 
 .pagination__link {
   display: inline-block;
   width: 26px;
   height: 26px;
+  margin: 0;
+  padding: 0;
   padding-top: 4px;
-  padding-left: 8px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
 
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  text-align: center;
   color: inherit;
 
   background-color: rgba(255, 255, 255, 0.0);
-  border-radius: 13px;
+  border-radius: 50%;
 }
 
 .pagination__link:hover,
