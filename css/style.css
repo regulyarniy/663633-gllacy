@@ -1158,31 +1158,78 @@ a {
 
 /* Чекбоксы */
 
-.filter__checkbox {
+.filter__checkbox + .filter__label {
+  position: relative;
+
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 0;
+  margin-left: 32px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+
+  cursor: pointer;
+}
+
+.filter__checkbox + .filter__label::before,
+.filter__checkbox:checked + .filter__label::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -32px;
+
   width: 22px;
   height: 22px;
   margin-top: 8px;
   margin-bottom: 8px;
 
   background-color: transparent;
-  border-color: #ffffff;
+  border: 2px solid #ffffff;
   border-radius: 2px;
   opacity: 0.8;
 }
 
-.filter__checkbox:hover,
-.filter__checkbox:focus,
-.filter__checkbox:active {
+.filter__checkbox:checked + .filter__label::after {
+  top: -2px;
+  left: -27px;
+
+  height: 12px;
+
+  border-width: 4px;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+}
+
+.filter__checkbox + .filter__label:hover::before,
+.filter__checkbox + .filter__label:active::before,
+.filter__checkbox + .filter__label:hover::after,
+.filter__checkbox + .filter__label:active::after {
   opacity: 1;
 }
 
-.filter__checkbox:checked {
+/* .filter__checkbox:checked {
   background-image: url(../img/filter__checkbox--checked.svg);
+} */
+
+.filter__checkbox:focus + .filter__label::before {
+  outline: auto;
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: Highlight;
+  opacity: 1;
 }
 
-.filter__checkbox:disabled {
+.filter__checkbox:focus + .filter__label::after {
+  opacity: 1;
+}
+
+.filter__checkbox:disabled + .filter__label::before,
+.filter__checkbox:disabled + .filter__label::after {
   opacity: 0.4;
 }
+
+/* Кнопка фильтра */
 
 .button--filter {
   display: inline-block;
