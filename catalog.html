@@ -23,13 +23,13 @@
       <nav class="main-nav">
         <ul class="main-nav__menu flex">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active">Каталог</a>
+            <a class="main-nav__link main-nav__link--active" href="catmenu.html">Каталог</a>
             <ul class="main-nav__submenu">
               <li class="main-nav__subitem main-nav__promoitem">
                 <a class="main-nav__sublink" href="#" tabindex="-1">Новинки</a>
               </li>
               <li class="main-nav__subitem">
-                <a class="main-nav__sublink main-nav__sublink--active" href="#" tabindex="-1">Сливочное</a>
+                <a class="main-nav__sublink main-nav__sublink--active" tabindex="-1">Сливочное</a>
               </li>
               <li class="main-nav__subitem">
                 <a class="main-nav__sublink" href="#" tabindex="-1">Щербеты</a>
@@ -168,15 +168,16 @@
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="filter__form" action="https://echo.htmlacademy.ru" method="post">
           <div class="flex flex--wrap flex--between">
-            <div class="flex flex--column">
+            <div class="flex flex--column relative">
               <!-- Выпадающий список -->
               <label class="filter__label" for="filter-sort">Сортировка:</label>
               <select class="filter__select" name="filter-sort" id="filter-sort">
-                <option class="filter__option">по популярности</option>
-                <option class="filter__option">сначала недорогие</option>
-                <option class="filter__option">сначала дорогие</option>
-                <option class="filter__option">по жирности</option>
-              </select>
+                  <option class="filter__option">по популярности</option>
+                  <option class="filter__option">сначала недорогие</option>
+                  <option class="filter__option">сначала дорогие</option>
+                  <option class="filter__option">по жирности</option>
+                </select>
+              <div class="filter__select-dropdown"></div>
             </div>
             <div class="flex flex--column">
               <!-- Ползунок -->
@@ -194,13 +195,13 @@
               <!-- Радиокнопки -->
               <label class="filter__label" for="filter-fat2">Жирность:</label>
               <div class="filter__item filter__item--fat">
-                <input class="filter__radio" type="radio" id="filter-fat1" name="filter-fat" value="0%">
+                <input class="filter__radio visually-hidden" type="radio" id="filter-fat1" name="filter-fat" value="0%">
                 <label class="filter__label filter__label--big" for="filter-fat1">0%</label>
-                <input class="filter__radio" type="radio" id="filter-fat2" name="filter-fat" value="до 10%" checked>
+                <input class="filter__radio visually-hidden" type="radio" id="filter-fat2" name="filter-fat" value="до 10%" checked>
                 <label class="filter__label filter__label--big" for="filter-fat2">до 10%</label>
-                <input class="filter__radio" type="radio" id="filter-fat3" name="filter-fat" value="до 30%">
+                <input class="filter__radio visually-hidden" type="radio" id="filter-fat3" name="filter-fat" value="до 30%">
                 <label class="filter__label filter__label--big" for="filter-fat3">до 30%</label>
-                <input class="filter__radio" type="radio" id="filter-fat4" name="filter-fat" value="выше 30%">
+                <input class="filter__radio visually-hidden" type="radio" id="filter-fat4" name="filter-fat" value="выше 30%">
                 <label class="filter__label filter__label--big" for="filter-fat4">выше 30%</label>
               </div>
             </div>
@@ -208,15 +209,15 @@
             <div class="flex flex--column">
               <label class="filter__label filter__label--checkbox" for="filter-filler3">Наполнители:</label>
               <div class="filter__item filter__item--filler">
-                <input class="filter__checkbox" type="checkbox" id="filter-filler1" name="filter-filler" value="шоколадные" checked>
+                <input class="filter__checkbox visually-hidden" type="checkbox" id="filter-filler1" name="filter-filler" value="шоколадные" checked>
                 <label class="filter__label filter__label--big" for="filter-filler1">шоколадные</label>
-                <input class="filter__checkbox" type="checkbox" id="filter-filler2" name="filter-filler" value="сахарные присыпки" checked>
+                <input class="filter__checkbox visually-hidden" type="checkbox" id="filter-filler2" name="filter-filler" value="сахарные присыпки" checked>
                 <label class="filter__label filter__label--big" for="filter-filler2">сахарные присыпки</label>
-                <input class="filter__checkbox" type="checkbox" id="filter-filler3" name="filter-filler" value="фрукты" checked>
+                <input class="filter__checkbox visually-hidden" type="checkbox" id="filter-filler3" name="filter-filler" value="фрукты" checked>
                 <label class="filter__label filter__label--big" for="filter-filler3">фрукты</label>
-                <input class="filter__checkbox" type="checkbox" id="filter-filler4" name="filter-filler" value="сиропы">
+                <input class="filter__checkbox visually-hidden" type="checkbox" id="filter-filler4" name="filter-filler" value="сиропы">
                 <label class="filter__label filter__label--big" for="filter-filler4">сиропы</label>
-                <input class="filter__checkbox" type="checkbox" id="filter-filler5" name="filter-filler" value="джемы">
+                <input class="filter__checkbox visually-hidden" type="checkbox" id="filter-filler5" name="filter-filler" value="джемы">
                 <label class="filter__label filter__label--big" for="filter-filler5">джемы</label>
               </div>
             </div>

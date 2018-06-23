@@ -20,7 +20,9 @@ a {
   text-decoration: none;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+.filter__radio.visually-hidden,
+.filter__checkbox.visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -923,8 +925,43 @@ a {
 
   background-color: rgba(255, 255, 255, 0.2);
 }
+
 .filter__select {
   width: 193px;
+  padding-left: 15px;
+
+  border: none;
+
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.filter__select::-ms-expand {
+  display: none;
+}
+
+.filter__select:focus {
+  background-color: #ffffff;
+}
+
+.filter__select-dropdown {
+  position: absolute;
+  top: 37px;
+  right: 15px;
+
+  width: 0;
+  height: 0;
+
+  border-top: 8px solid #ffffff;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
+.filter__select:hover + .filter__select-dropdown,
+.filter__select:focus + .filter__select-dropdown,
+.filter__select:active + .filter__select-dropdown {
+  border-top-color: #323232;
 }
 
 .filter__select:hover,
@@ -944,7 +981,7 @@ a {
 .filter__range,
 .filter__item,
 .filter__select {
-  height: 36px;
+  min-height: 36px;
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
