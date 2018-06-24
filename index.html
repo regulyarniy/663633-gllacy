@@ -23,7 +23,7 @@
       <img class="general-header__logo" src="img/general-header__logo.svg" alt="Глейси" width="155" height="65" />
       <!-- Главное меню -->
       <nav class="main-nav">
-        <ul class="main-nav__menu flex">
+        <ul class="main-nav__menu flex flex--wrap">
           <li class="main-nav__item">
             <a class="main-nav__link" href="catmenu.html">Каталог</a>
             <ul class="main-nav__submenu">
@@ -54,10 +54,12 @@
       </nav>
       <!-- Меню с пользовательскими функциями -->
       <!-- Иконки кнопок вставить псевдоэлементами -->
-      <div class="user-interface flex">
+      <div class="user-interface flex flex--wrap">
         <div class="user-interface__wrapper">
           <!-- Кнопка поиска -->
-          <a class="button button--interface button--search" href="search.html" name="search-button"><span class="visually-hidden">Поиск</span></a>
+          <a class="button button--interface button--search" href="search.html" name="search-button">
+            <span class="visually-hidden">Поиск</span>
+          </a>
           <!-- Форма поиска -->
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
             <h3 class="visually-hidden">Форма поиска</h3>
@@ -334,8 +336,7 @@
           Сделано в
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
             HTML Academy
-          </a>
-          © 2017
+          </a> © 2017
         </span>
       </p>
     </div>
