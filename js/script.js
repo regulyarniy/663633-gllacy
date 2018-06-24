@@ -1,3 +1,4 @@
+// Интерактивная карта
 document.addEventListener('DOMContentLoaded', function() {
   if (document.querySelectorAll('#map').length > 0) {
     if (document.querySelector('html').lang)
@@ -26,7 +27,15 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
     center: viewpoint,
-    disableDefaultUI: true,
+    zoomControl: true,
+    zoomControlOptions: {
+      position: google.maps.ControlPosition.LEFT_CENTER
+    },
+    mapTypeControl: false,
+    scaleControl: true,
+    streetViewControl: false,
+    rotateControl: false,
+    fullscreenControl: false,
     mapTypeId: 'roadmap',
     styles: [{
         "featureType": "poi",
