@@ -266,7 +266,7 @@
           <p class="subscribe__content">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
           <div class="flex">
             <label class="visually-hidden" for="subscribe-email-input">Электронная почта:</label>
-            <input class="subscribe-form__input" type="text" name="subscribe-email-input" id="subscribe-email-input" placeholder="Электронная почта">
+            <input class="subscribe-form__input" type="email" name="subscribe-email-input" id="subscribe-email-input" placeholder="Электронная почта">
             <button class="button button--primary" type="submit" name="subscribe-button">Отправить</button>
           </div>
         </form>
@@ -342,19 +342,17 @@
 
     <!-- Форма обратной связи -->
 
-    <section class="feedback modal visually-hidden">
+    <section class="feedback modal">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <button class="button button--remove button--modal-close" type="button" name="modal-close">Закрыть</button>
-      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <button class="button button--remove button--modal-close" type="button" name="modal-close"><span class="visually-hidden">Закрыть</span></button>
+      <form class="feedback-form flex flex--column" action="https://echo.htmlacademy.ru" method="post">
         <b class="feedback-form__title">Мы обязательно вам ответим!</b>
         <label class="visually-hidden" for="name-input">Ваше имя:</label>
         <input class="feedback-form__input" type="text" name="name-input" id="name-input" placeholder="Как вас зовут?">
         <label class="visually-hidden" for="feedback-email-input">Электронная почта:</label>
         <input class="feedback-form__input" type="text" name="feedback-email-input" id="feedback-email-input" placeholder="Ваша почта для ответа?">
         <label class="visually-hidden" for="feedback-text-input">Вопрос:</label>
-        <textarea class="feedback-form__textarea" name="feedback-text-input" id="feedback-text-input" rows="10" cols="50">
-          Напишите что-нибудь...
-        </textarea>
+        <textarea class="feedback-form__textarea" name="feedback-text-input" id="feedback-text-input" rows="10" cols="50" placeholder="Напишите что-нибудь..."></textarea>
         <button class="button button--primary" type="submit" name="feedback-button">Отправить</button>
       </form>
     </section>
