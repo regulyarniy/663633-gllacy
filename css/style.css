@@ -1110,6 +1110,12 @@ a {
   cursor: pointer;
 }
 
+.filter__radio:not(:disabled) + .filter__label:hover,
+.filter__radio:focus + .filter__label,
+.filter__radio:active + .filter__label {
+  color: #323232;
+}
+
 .filter__radio + .filter__label::before,
 .filter__radio:checked + .filter__label::after {
   content: "";
@@ -1179,6 +1185,12 @@ a {
   padding-bottom: 6px;
 
   cursor: pointer;
+}
+
+.filter__checkbox:not(:disabled) + .filter__label:hover,
+.filter__checkbox:focus + .filter__label,
+.filter__checkbox:active + .filter__label {
+  color: #323232;
 }
 
 .filter__checkbox + .filter__label::before,
