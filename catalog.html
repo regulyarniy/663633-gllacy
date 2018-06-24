@@ -51,11 +51,12 @@
         </ul>
       </nav>
       <!-- Меню с пользовательскими функциями -->
-      <!-- Иконки кнопок вставить псевдоэлементами -->
       <div class="user-interface flex flex--wrap">
         <div class="user-interface__wrapper">
           <!-- Кнопка поиска -->
-          <a class="button button--interface button--search" href="search.html" name="search-button"><span class="visually-hidden">Поиск</span></a>
+          <a class="button button--interface button--search" href="search.html" name="search-button">
+            <span class="visually-hidden">Поиск</span>
+          </a>
           <!-- Форма поиска -->
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
             <h3 class="visually-hidden">Форма поиска</h3>
@@ -182,7 +183,8 @@
             <div class="flex flex--column">
               <!-- Ползунок -->
               <p class="filter__label">
-                Цена: <span class="filter__range-start" id="filter-range-start">100</span> руб. -
+                Цена:
+                <span class="filter__range-start" id="filter-range-start">100</span> руб. -
                 <span class="filter__range-end" id="filter-range-end">500</span> руб.
               </p>
               <div class="filter__range-control">
@@ -234,191 +236,206 @@
       <div class="container container--products">
         <h2 class="visually-hidden">Товары каталога</h2>
         <ul class="products__list flex flex--wrap">
+
           <li class="products__item flex flex--column flex--center">
-            <a class="products__link flex flex--wrap" href="#">
+            <a class="products__link flex flex--wrap relative" href="#">
               <img class="products__image flex-center" src="img/products__orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
               <p class="products__wrapper">
                 <span class="products__price">310 ₽</span>
                 <span class="products__kg">/кг</span>
               </p>
-              <p class="products__name">
-                <span class="products__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
-              </p>
+            </a>
+            <a class="products__link products__link--text" href="#">
+              <span class="products__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
             </a>
             <div class="products__quickview flex">
               <a class="button button--primary" href="#">Быстрый просмотр</a>
             </div>
           </li>
+
           <li class="products__item flex flex--column flex--center">
-            <a class="products__link flex flex--wrap" href="#">
+            <a class="products__link flex flex--wrap relative" href="#">
               <img class="products__image flex-center" src="img/products__coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
               <p class="products__wrapper">
                 <span class="products__price">380 ₽</span>
                 <span class="products__kg">/кг</span>
               </p>
-              <p class="products__name">
-                <span class="products__title">Сливочно-кофейное с кусочками шоколада</span>
-              </p>
+            </a>
+            <a class="products__link products__link--text" href="#">
+              <span class="products__title">Сливочно-кофейное с кусочками шоколада</span>
             </a>
             <div class="products__quickview flex">
               <a class="button button--primary" href="#">Быстрый просмотр</a>
             </div>
           </li>
+
           <li class="products__item flex flex--column flex--center">
-            <a class="products__link flex flex--wrap" href="#">
+            <a class="products__link flex flex--wrap relative" href="#">
               <img class="products__image flex-center" src="img/products__strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
               <p class="products__wrapper">
                 <span class="products__price">355 ₽</span>
                 <span class="products__kg">/кг</span>
               </p>
-              <p class="products__name">
-                <span class="products__title">Сливочно-клубничное с присыпкой из белого шоколада</span>
-              </p>
+            </a>
+            <a class="products__link products__link--text" href="#">
+              <span class="products__title">Сливочно-клубничное с присыпкой из белого шоколада</span>
             </a>
             <div class="products__quickview flex">
               <a class="button button--primary" href="#">Быстрый просмотр</a>
             </div>
           </li>
+
           <li class="products__item flex flex--column flex--center">
-            <a class="products__link flex flex--wrap" href="#">
+            <a class="products__link flex flex--wrap relative" href="#">
               <img class="products__image flex-center" src="img/products__cream.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
               <p class="products__wrapper">
                 <span class="products__price">415 ₽</span>
                 <span class="products__kg">/кг</span>
               </p>
-              <p class="products__name">
-                <span class="products__title">Сливочное крем-брюле с карамельной подливкой</span>
-              </p>
+            </a>
+            <a class="products__link products__link--text" href="#">
+              <span class="products__title">Сливочное крем-брюле с карамельной подливкой</span>
             </a>
             <div class="products__quickview flex">
               <a class="button button--primary" href="#">Быстрый просмотр</a>
             </div>
           </li>
+
           <li class="products__item flex flex--column flex--center">
-            <a class="products__link flex flex--wrap" href="#">
+            <a class="products__link flex flex--wrap relative" href="#">
               <img class="products__image flex-center" src="img/products__lingonberry.jpg" alt="Сливочное с брусничным джемом" width="267" height="267">
               <p class="products__wrapper">
                 <span class="products__price">325 ₽</span>
                 <span class="products__kg">/кг</span>
               </p>
-              <p class="products__name">
-                <span class="products__title">Сливочное с брусничным джемом</span>
-              </p>
+            </a>
+            <a class="products__link products__link--text" href="#">
+              <span class="products__title">Сливочное с брусничным джемом</span>
             </a>
             <div class="products__quickview flex">
               <a class="button button--primary" href="#">Быстрый просмотр</a>
             </div>
           </li>
+
           <li class="products__item flex flex--column flex--center">
-            <a class="products__link flex flex--wrap" href="#">
+            <a class="products__link flex flex--wrap relative" href="#">
               <img class="products__image flex-center" src="img/products__blueberry.jpg" alt="Сливочно-черничное с цельными ягодами черники" width="267" height="267">
               <p class="products__wrapper">
                 <span class="products__price">410 ₽</span>
                 <span class="products__kg">/кг</span>
               </p>
-              <p class="products__name">
-                <span class="products__title">Сливочно-черничное с цельными ягодами черники</span>
-              </p>
+            </a>
+            <a class="products__link products__link--text" href="#">
+              <span class="products__title">Сливочно-черничное с цельными ягодами черники</span>
             </a>
             <div class="products__quickview flex">
               <a class="button button--primary" href="#">Быстрый просмотр</a>
             </div>
           </li>
+
           <li class="products__item flex flex--column flex--center">
-            <a class="products__link flex flex--wrap" href="#">
+            <a class="products__link flex flex--wrap relative" href="#">
               <img class="products__image flex-center" src="img/products__lemon.jpg" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
               <p class="products__wrapper">
                 <span class="products__price">375 ₽</span>
                 <span class="products__kg">/кг</span>
               </p>
-              <p class="products__name">
-                <span class="products__title">Сливочно-лимонное с карамельной присыпкой</span>
-              </p>
+            </a>
+            <a class="products__link products__link--text" href="#">
+              <span class="products__title">Сливочно-лимонное с карамельной присыпкой</span>
             </a>
             <div class="products__quickview flex">
               <a class="button button--primary" href="#">Быстрый просмотр</a>
             </div>
           </li>
+
           <li class="products__item flex flex--column flex--center">
-            <a class="products__link flex flex--wrap" href="#">
+            <a class="products__link flex flex--wrap relative" href="#">
               <img class="products__image flex-center" src="img/products__chocograced.jpg" alt="Сливочное с шоколадной стружкой" width="267" height="267">
               <p class="products__wrapper">
                 <span class="products__price">320 ₽</span>
                 <span class="products__kg">/кг</span>
               </p>
-              <p class="products__name">
-                <span class="products__title">Сливочное с шоколадной стружкой</span>
-              </p>
+            </a>
+            <a class="products__link products__link--text" href="#">
+              <span class="products__title">Сливочное с шоколадной стружкой</span>
             </a>
             <div class="products__quickview flex">
               <a class="button button--primary" href="#">Быстрый просмотр</a>
             </div>
           </li>
+
           <li class="products__item flex flex--column flex--center">
-            <a class="products__link flex flex--wrap" href="#">
+            <a class="products__link flex flex--wrap relative" href="#">
               <img class="products__image flex-center" src="img/products__vanilla.jpg" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
               <p class="products__wrapper">
                 <span class="products__price">440 ₽</span>
                 <span class="products__kg">/кг</span>
               </p>
-              <p class="products__name">
-                <span class="products__title">Сливочно-ванильное с кусочками шоколада</span>
-              </p>
+            </a>
+            <a class="products__link products__link--text" href="#">
+              <span class="products__title">Сливочно-ванильное с кусочками шоколада</span>
             </a>
             <div class="products__quickview flex">
               <a class="button button--primary" href="#">Быстрый просмотр</a>
             </div>
           </li>
+
           <li class="products__item flex flex--column flex--center">
-            <a class="products__link flex flex--wrap" href="#">
+            <a class="products__link flex flex--wrap relative" href="#">
               <img class="products__image flex-center" src="img/products__menthol.jpg" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
               <p class="products__wrapper">
                 <span class="products__price">435 ₽</span>
                 <span class="products__kg">/кг</span>
               </p>
-              <p class="products__name">
-                <span class="products__title">Сливочноe с ментоловым сиропом</span>
-              </p>
+            </a>
+            <a class="products__link products__link--text" href="#">
+              <span class="products__title">Сливочноe с ментоловым сиропом</span>
             </a>
             <div class="products__quickview flex">
               <a class="button button--primary" href="#">Быстрый просмотр</a>
             </div>
           </li>
+
           <li class="products__item flex flex--column flex--center">
-            <a class="products__link flex flex--wrap" href="#">
+            <a class="products__link flex flex--wrap relative" href="#">
               <img class="products__image flex-center" src="img/products__chocopieces.jpg" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
               <p class="products__wrapper">
                 <span class="products__price">355 ₽</span>
                 <span class="products__kg">/кг</span>
               </p>
-              <p class="products__name">
-                <span class="products__title">Сливочное с кусочками черного шоколада</span>
-              </p>
+            </a>
+            <a class="products__link products__link--text" href="#">
+              <span class="products__title">Сливочное с кусочками черного шоколада</span>
             </a>
             <div class="products__quickview flex">
               <a class="button button--primary" href="#">Быстрый просмотр</a>
             </div>
           </li>
+
           <li class="products__item flex flex--column flex--center">
-            <a class="products__link  flex flex--wrap" href="#">
+            <a class="products__link flex flex--wrap relative" href="#">
               <img class="products__image flex-center" src="img/products__mint.jpg" alt="Сливочное с мятным сиропом" width="267" height="267">
               <p class="products__wrapper">
                 <span class="products__price">420 ₽</span>
                 <span class="products__kg">/кг</span>
               </p>
-              <p class="products__name">
-                <span class="products__title">Сливочное с мятным сиропом</span>
-              </p>
+            </a>
+            <a class="products__link products__link--text" href="#">
+              <span class="products__title">Сливочное с мятным сиропом</span>
             </a>
             <div class="products__quickview flex">
               <a class="button button--primary" href="#">Быстрый просмотр</a>
             </div>
           </li>
+
         </ul>
         <div class="pagination">
           <ol class="pagination__list flex">
             <li class="pagination__item">
-              <a class="pagination__link pagination__link--prev pagination__link--disabled" href="#"><span class="visually-hidden">Назад</span></a>
+              <a class="pagination__link pagination__link--prev pagination__link--disabled" href="#">
+                <span class="visually-hidden">Назад</span>
+              </a>
             </li>
             <li class="pagination__item">
               <a class="pagination__link pagination__link--active">1</a>
@@ -436,7 +453,9 @@
               <a class="pagination__link" href="#">5</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link pagination__link--next" href="#"><span class="visually-hidden">Вперед</span></a>
+              <a class="pagination__link pagination__link--next" href="#">
+                <span class="visually-hidden">Вперед</span>
+              </a>
             </li>
           </ol>
         </div>
@@ -485,8 +504,7 @@
           Сделано в
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
             HTML Academy
-          </a>
-          © 2017
+          </a> © 2017
         </span>
       </p>
     </div>
