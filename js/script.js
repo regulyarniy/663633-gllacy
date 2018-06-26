@@ -1,19 +1,79 @@
-// Вызов модального окна
-var modalToggle = document.querySelectorAll('.modal-toggle');
+//Функции удаления и добавления tabindex
+function removeTabIndex(elementsArray) {
+  for (var i = 0; i < elementsArray.length; i++) {
+    elementsArray[i].setAttribute('tabindex', '0');
+  };
+};
+
+function addTabIndex(elementsArray) {
+  for (var i = 0; i < elementsArray.length; i++) {
+    elementsArray[i].setAttribute('tabindex', '-1');
+  };
+};
+
+// Слайдер
+
+
+
+// Модальное окно
 var modal = document.querySelector('.modal');
-if (modalToggle) {
+var modalToggle = document.querySelectorAll('.modal-toggle');
+
+if (modal && modalToggle) {
+  var modalForm = modal.querySelector('.feedback-form');
+  var modalName = modal.querySelector('#name-input');
+  var modalEmail = modal.querySelector('#feedback-email-input');
+  var modalText = modal.querySelector('#feedback-text-input');
+  var modalClose = modal.querySelector('.button--modal-close');
+  var modalInputs = [modalName, modalEmail, modalText, modalClose];
+  // Открытие/закрытие по кнопкам
   for (i = 0; i < modalToggle.length; i++) {
     modalToggle[i].addEventListener('click', function(evt) {
       evt.preventDefault();
       modal.classList.toggle('visually-hidden');
+      // Фокус на имени при всплытии и tabindex в 0
+      if (!modal.classList.contains('visually-hidden')) {
+        removeTabIndex(modalInputs);
+        modal.classList.add('modal--animated');
+        modal.classList.remove('modal--error');
+        modalName.focus();
+      } else {
+        // tabindex в -1 при закрытии формы
+        addTabIndex(modalInputs);
+        modal.classList.remove('modal--animated');
+        modal.classList.remove('modal--error');
+      };
     });
   }
+  // Закрытие по щелчку вне формы
   window.onclick = function(evt) {
-    if (evt.target == modal) {
+    if (evt.target == modal && !modal.classList.contains('visually-hidden')) {
+      addTabIndex(modalInputs);
+      modal.classList.remove('modal--animated');
+      modal.classList.remove('modal--error');
       modal.classList.add('visually-hidden');
     }
   }
-}
+  // Закрытие по ESC
+  window.addEventListener('keydown', function(evt) {
+    if (evt.keyCode === 27 && !modal.classList.contains('visually-hidden')) {
+      evt.preventDefault();
+      addTabIndex(modalInputs);
+      modal.classList.remove('modal--animated');
+      modal.classList.remove('modal--error');
+      modal.classList.add('visually-hidden');
+    };
+  });
+  // Проверка на отсутствие введенных данных
+  modalForm.addEventListener('submit', function(evt) {
+    if (!modalName.value || !modalEmail.value || !modalText.value) {
+      evt.preventDefault();
+      modal.classList.remove('modal--error');
+      modal.offsetWidth = modal.offsetWidth;
+      modal.classList.add('modal--error');
+    };
+  });
+};
 
 // Проверяем нужна ли карта на странице и добавляем скрипты API Google Maps
 document.addEventListener('DOMContentLoaded', function() {
@@ -27,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     js_file.type = 'text/javascript';
     js_file.src = 'https://maps.googleapis.com/maps/api/js?callback=initMap&signed_in=true&key=AIzaSyAMUMuva5VkEeo4WbgbTcL5d-xxoTI54Ig&language=' + lang;
     document.getElementsByTagName('head')[0].appendChild(js_file);
-  }
+  };
 });
 // Добавляем карту
 if (document.querySelectorAll('#map').length > 0) {
@@ -40,7 +100,7 @@ if (document.querySelectorAll('#map').length > 0) {
     var viewpoint = {
       lat: 59.939674,
       lng: 30.325976
-    }
+    };
 
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15,
@@ -223,5 +283,5 @@ if (document.querySelectorAll('#map').length > 0) {
       map: map,
       icon: 'img/map-pin.png'
     });
-  }
-}
+  };
+};

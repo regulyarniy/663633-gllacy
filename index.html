@@ -364,17 +364,17 @@
 
     <section class="feedback modal visually-hidden">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <button class="button button--remove button--modal-close modal-toggle" type="button">
+      <button class="button button--remove button--modal-close modal-toggle" type="button" tabindex="-1">
         <span class="visually-hidden">Закрыть</span>
       </button>
       <form class="feedback-form flex flex--column" action="https://echo.htmlacademy.ru" method="post">
         <b class="feedback-form__title">Мы обязательно вам ответим!</b>
         <label class="visually-hidden" for="name-input">Ваше имя:</label>
-        <input class="feedback-form__input" type="text" name="name-input" id="name-input" placeholder="Как вас зовут?">
+        <input class="feedback-form__input" type="text" name="name-input" id="name-input" placeholder="Как вас зовут?" tabindex="-1">
         <label class="visually-hidden" for="feedback-email-input">Электронная почта:</label>
-        <input class="feedback-form__input" type="text" name="feedback-email-input" id="feedback-email-input" placeholder="Ваша почта для ответа?">
+        <input class="feedback-form__input" type="text" name="feedback-email-input" id="feedback-email-input" placeholder="Ваша почта для ответа?" tabindex="-1">
         <label class="visually-hidden" for="feedback-text-input">Вопрос:</label>
-        <textarea class="feedback-form__textarea" name="feedback-text-input" id="feedback-text-input" rows="10" cols="50" placeholder="Напишите что-нибудь..."></textarea>
+        <textarea class="feedback-form__textarea" name="feedback-text-input" id="feedback-text-input" rows="10" cols="50" placeholder="Напишите что-нибудь..." tabindex="-1"></textarea>
         <button class="button button--primary" type="submit" name="feedback-button">Отправить</button>
       </form>
     </section>
