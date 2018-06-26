@@ -1,19 +1,87 @@
-//Функции удаления и добавления tabindex
+//Функция включения в обработку по TAB
 function removeTabIndex(elementsArray) {
   for (var i = 0; i < elementsArray.length; i++) {
     elementsArray[i].setAttribute('tabindex', '0');
   };
 };
-
+//Функция выключения из обработки по TAB
 function addTabIndex(elementsArray) {
   for (var i = 0; i < elementsArray.length; i++) {
     elementsArray[i].setAttribute('tabindex', '-1');
   };
 };
+//Функция добавления класса к NodeList
+function addClassToNodes(elementsArray, addedClass) {
+  for (var i = 0; i < elementsArray.length; i++) {
+    elementsArray[i].classList.add(addedClass);
+  };
+};
+//Функция удаления класса с NodeList
+function removeClassFromNodes(elementsArray, removedClass) {
+  for (var i = 0; i < elementsArray.length; i++) {
+    elementsArray[i].classList.remove(removedClass);
+  };
+};
+//Функция добавления классов с суффиксом(начиная с 0) к элементу
+function addClassToElement(element, count, classPostfix) {
+  for (var i = 0; i < count; i++) {
+    element.classList.add(classPostfix + i);
+  };
+};
+//Функция удаления классов с суффиксом(начиная с 0) с элемента
+function removeClassFromElement(element, count, classPrefix) {
+  for (var i = 0; i < count; i++) {
+    element.classList.remove(classPrefix + i);
+  };
+};
+//Функция добавления класса к выборке элементов по селекторам с суффиксом
+function addClassToSelectorSuffix(element, count, classPrefix, addedClass) {
+  for (var i = 0; i < count; i++) {
+    element.querySelector(classPrefix + i).classList.add(addedClass);
+  };
+};
+//Функция удаления класса из выборки элементов по селекторам с суффиксом
+function removeClassFromSelectorSuffix(element, count, classPrefix, addedClass) {
+  for (var i = 0; i < count; i++) {
+    element.querySelector(classPrefix + i).classList.remove(addedClass);
+  };
+};
 
 // Слайдер
+var sliderBody = document.querySelector('.general-body');
+var sliderBack = document.querySelector('.general-body__sliderbg');
+var sliderControl = document.querySelector('.slider-control');
+var sliderContent = document.querySelector('.general-slider');
 
-
+if (sliderBody && sliderBack && sliderControl && sliderContent) {
+  var sliderControlButton = sliderControl.querySelectorAll('.button--slider');
+  //Добавляем событие по клику для всех кнопок
+  [].forEach.call(sliderControlButton, function(e) {
+    e.addEventListener('click',
+      function(evt) {
+        evt.preventDefault();
+        //Переназначаем классы кнопкам
+        removeClassFromNodes(sliderControlButton, 'button--slider-active');
+        this.classList.add('button--slider-active');
+        // Получаем номер кнопки
+        var buttonNumber = Array.from(this.parentNode.children).indexOf(this);
+        //Получаем количество кнопок
+        var buttonCount = sliderControlButton.length;
+        //Меняем цвет фона
+        removeClassFromElement(sliderBody, buttonCount, 'general-body--bg')
+        sliderBody.classList.add('general-body--bg' + buttonNumber);
+        // Меняем картинку
+        removeClassFromElement(sliderBack, buttonCount, 'general-body__sliderbg--');
+        sliderBack.classList.add('general-body__sliderbg--' + buttonNumber);
+        // Меняем контент
+        addClassToSelectorSuffix(sliderContent, buttonCount, '.general-slider__item--', 'visually-hidden');
+        sliderContent.querySelector('.general-slider__item--' + buttonNumber).classList.remove('visually-hidden');
+        // Меняем tabindex
+        addTabIndex(sliderContent.querySelectorAll('.button'));
+        sliderContent.querySelector('.general-slider__item--' + buttonNumber + ' .button').setAttribute('tabindex', '0');
+      });
+  });
+};
 
 // Модальное окно
 var modal = document.querySelector('.modal');

@@ -119,15 +119,15 @@ a {
   background-color: #849d8f;
 }
 
-.general-body--bg1 {
+.general-body--bg0 {
   background-color: #849d8f;
 }
 
-.general-body--bg2 {
+.general-body--bg1 {
   background-color: #8996a6;
 }
 
-.general-body--bg3 {
+.general-body--bg2 {
   background-color: #9d8b84;
 }
 
@@ -145,16 +145,16 @@ a {
   background-position: center top;
 }
 
+.general-body__sliderbg--0 {
+  background-image: url("../img/general-slider__item--0.png");
+}
+
 .general-body__sliderbg--1 {
   background-image: url("../img/general-slider__item--1.png");
 }
 
 .general-body__sliderbg--2 {
   background-image: url("../img/general-slider__item--2.png");
-}
-
-.general-body__sliderbg--3 {
-  background-image: url("../img/general-slider__item--3.png");
 }
 
 
