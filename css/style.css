@@ -1599,6 +1599,7 @@ a {
 }
 
 .products__item .button {
+  height: 44px;
   margin-bottom: 5%;
   padding-right: 17px;
   padding-left: 17px;
