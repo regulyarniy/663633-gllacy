@@ -193,7 +193,7 @@ a {
 
 .button {
   display: inline-block;
-  height: 46px;
+  min-height: 46px;
   margin: 0;
   padding-top: 11px;
   padding-right: 24px;
@@ -203,6 +203,7 @@ a {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+  vertical-align: baseline;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
@@ -247,7 +248,7 @@ a {
 
 .button--primary {
   min-width: 24px;
-  height: 44px;
+  min-height: 44px;
   padding-top: 10px;
   padding-right: 24px;
   padding-bottom: 10px;
@@ -262,7 +263,7 @@ a {
 
 .button--big {
   min-width: 40px;
-  height: 63px;
+  min-height: 63px;
   padding-top: 9px;
   padding-right: 40px;
   padding-bottom: 10px;
@@ -461,6 +462,7 @@ a {
   padding: 0;
 
   line-height: 0;
+  vertical-align: baseline;
 }
 
 .general-header__logo {
@@ -517,13 +519,15 @@ a {
 
   display: inline-block;
   width: auto;
-  height: 32px;
+  min-height: 32px;
   margin: 0;
   padding: 0;
   padding-top: 7px;
   padding-right: 14px;
   padding-bottom: 7px;
   padding-left: 14px;
+
+  vertical-align: baseline;
 
   border-radius: 15px;
 
@@ -685,7 +689,7 @@ a {
 
 .button--interface {
   min-width: 10px;
-  height: 32px;
+  min-height: 32px;
   margin: 0;
   margin-right: 11px;
   padding: 0;
@@ -935,7 +939,7 @@ a {
 .button--slider,
 .button--slider-active {
   width: 21px;
-  height: 21px;
+  min-height: 21px;
   margin-right: 5px;
   padding: 0;
 
@@ -1184,6 +1188,8 @@ a {
   padding-top: 10px;
   padding-bottom: 6px;
 
+  vertical-align: baseline;
+
   cursor: pointer;
 }
 
@@ -1259,6 +1265,8 @@ a {
   margin-left: 32px;
   padding-top: 10px;
   padding-bottom: 6px;
+
+  vertical-align: baseline;
 
   cursor: pointer;
 }
@@ -1346,6 +1354,7 @@ a {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  vertical-align: baseline;
   color: #ffffff;
 
   background-color: rgba(255, 255, 255, 0.2);
@@ -1548,6 +1557,8 @@ a {
   display: inline-block;
   width: 61px;
   height: 61px;
+
+  vertical-align: baseline;
 
   background-image: url("../img/products__icon.svg");
   background-repeat: no-repeat;
@@ -1837,6 +1848,7 @@ a {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  vertical-align: baseline;
   text-align: center;
   color: inherit;
 
