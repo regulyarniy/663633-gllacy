@@ -46,6 +46,48 @@ function removeClassFromSelectorSuffix(element, count, classPrefix, addedClass) 
     element.querySelector(classPrefix + i).classList.remove(addedClass);
   };
 };
+// Функция начала перемещения
+function startDrag(e)
+/*sets offset parameters and starts listening for mouse-move*/
+{
+  e.preventDefault();
+  e.stopPropagation();
+  dragObj = e.target;
+  // dragObj.style.position = "absolute";
+  var rect = dragObj.getBoundingClientRect();
+
+  if (e.type == "mousedown") {
+    // xOffset = e.clientX - rect.left; //clientX and getBoundingClientRect() both use viewable area adjusted when scrolling aka 'viewport'
+    window.addEventListener('mousemove', dragObject, true);
+  } else if (e.type == "touchstart") {
+    // xOffset = e.targetTouches[0].clientX - rect.left; //clientX and getBoundingClientRect() both use viewable area adjusted when scrolling aka 'viewport'
+    window.addEventListener('touchmove', dragObject, true);
+  }
+}
+// Функция перемещения
+function dragObject(e)
+/*Drag object*/
+{
+  e.preventDefault();
+  e.stopPropagation();
+
+  if (dragObj == null) return; // if there is no object being dragged then do nothing
+  else if (e.type == "mousemove") {
+    dragObj.style.left = e.clientX - xOffset + "px"; // adjust location of dragged object so doesn't jump to mouse position
+  } else if (e.type == "touchmove") {
+    dragObj.style.left = e.targetTouches[0].clientX - xOffset + "px"; // adjust location of dragged object so doesn't jump to mouse position
+  }
+}
+// Функция окончания перемещения
+document.onmouseup = function(e)
+/*End dragging*/
+{
+  if (dragObj) {
+    dragObj = null;
+    window.removeEventListener('mousemove', dragObject, true);
+    window.removeEventListener('touchmove', dragObject, true);
+  }
+}
 
 // Слайдер
 var sliderBody = document.querySelector('.general-body');
@@ -353,3 +395,35 @@ if (document.querySelectorAll('#map').length > 0) {
     });
   };
 };
+
+//Ползунок цены в каталоге
+var rangeStartDisplay = document.querySelector('#filter-range-start-counter');
+var rangeEndDisplay = document.querySelector('#filter-range-end-counter');
+var rangeStart = document.querySelector('#filter-range-start');
+var rangeEnd = document.querySelector('#filter-range-end');
+var rangeStartControl = document.querySelector('#filter-range-start-control');
+var rangeEndControl = document.querySelector('#filter-range-end-control');
+
+if (rangeStartDisplay && rangeEndDisplay && rangeStart && rangeEnd && rangeStartControl && rangeEndControl) {
+  var xOffset = 0;
+  var minPrice = rangeStart.value;
+  var maxPrice = rangeEnd.value;
+  rangeStartDisplay.innerHTML = minPrice;
+  rangeEndDisplay.innerHTML = maxPrice;
+  rangeStartControl.addEventListener('click', function(evt) {
+    rangeStart.value = parseInt(rangeStart.value, 10) + 100;
+    maxPrice = rangeStart.value;
+    rangeStartDisplay.innerHTML = maxPrice;
+  });
+  rangeEndControl.addEventListener('click', function(evt) {
+    rangeEnd.value = parseInt(rangeEnd.value, 10) + 100;
+    minPrice = rangeEnd.value;
+    rangeEndDisplay.innerHTML = minPrice;
+  });
+  window.onload = function() {
+    rangeStartControl.addEventListener("mousedown", startDrag, true);
+    rangeStartControl.addEventListener("touchstart", startDrag, true);
+    rangeEndControl.addEventListener("mousedown", startDrag, true);
+    rangeEndControl.addEventListener("touchstart", startDrag, true);
+  }
+}
