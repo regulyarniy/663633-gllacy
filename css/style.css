@@ -1336,6 +1336,7 @@ a {
 .button--filter {
   display: inline-block;
   height: 36px;
+  min-height: 36px;
   margin-top: auto;
   padding-top: 7px;
   padding-right: 27px;
