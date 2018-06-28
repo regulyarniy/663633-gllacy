@@ -1105,8 +1105,8 @@ a {
   width: 218px;
 }
 
-.filter__range-control::before,
-.filter__range-control::after {
+.filter__range-ruler,
+.filter__range-ruler-active {
   content: "";
   position: absolute;
   top: 16px;
@@ -1120,16 +1120,11 @@ a {
   opacity: 0.5;
 }
 
-.filter__range-control::before {
+.filter__range-ruler {
   opacity: 0.5;
 }
 
 .filter__range-control .filter__label {
-  position: absolute;
-}
-
-.filter__range-control .filter__label::before {
-  content: "";
   position: absolute;
   top: 8px;
   left: 20px;
@@ -1145,7 +1140,7 @@ a {
   cursor: pointer;
 }
 
-.filter__range-control::before {
+.filter__range-ruler-active {
   /* Положение линейки для JS */
   /* Левая абцисса: 20 + смещение первого ползунка */
   /* Длина: смещение первого + смещение второго - начальная абцисса */
@@ -1156,21 +1151,17 @@ a {
   opacity: 1;
 }
 
-.filter__range-control .filter__label[for="filter-range-start"]::before {
+.filter__range-control .filter__label[for="filter-range-start"] {
   /* Положение первого ползунка для JS */
   left: calc(20px + 20px);
 }
 
-.filter__range-control .filter__label[for="filter-range-end"]::before {
+.filter__range-control .filter__label[for="filter-range-end"] {
   /* Положение второго ползунка для JS */
   left: calc(20px + 140px);
 }
 
 .filter__range-control .filter__label:focus {
-  outline: none;
-}
-
-.filter__range-control .filter__label:focus::before {
   outline: auto;
   outline-width: 2px;
   outline-style: solid;

@@ -46,49 +46,6 @@ function removeClassFromSelectorSuffix(element, count, classPrefix, addedClass) 
     element.querySelector(classPrefix + i).classList.remove(addedClass);
   };
 };
-// Функция начала перемещения
-function startDrag(e)
-/*sets offset parameters and starts listening for mouse-move*/
-{
-  e.preventDefault();
-  e.stopPropagation();
-  dragObj = e.target;
-  // dragObj.style.position = "absolute";
-  var rect = dragObj.getBoundingClientRect();
-
-  if (e.type == "mousedown") {
-    // xOffset = e.clientX - rect.left; //clientX and getBoundingClientRect() both use viewable area adjusted when scrolling aka 'viewport'
-    window.addEventListener('mousemove', dragObject, true);
-  } else if (e.type == "touchstart") {
-    // xOffset = e.targetTouches[0].clientX - rect.left; //clientX and getBoundingClientRect() both use viewable area adjusted when scrolling aka 'viewport'
-    window.addEventListener('touchmove', dragObject, true);
-  }
-}
-// Функция перемещения
-function dragObject(e)
-/*Drag object*/
-{
-  e.preventDefault();
-  e.stopPropagation();
-
-  if (dragObj == null) return; // if there is no object being dragged then do nothing
-  else if (e.type == "mousemove") {
-    dragObj.style.left = e.clientX - xOffset + "px"; // adjust location of dragged object so doesn't jump to mouse position
-  } else if (e.type == "touchmove") {
-    dragObj.style.left = e.targetTouches[0].clientX - xOffset + "px"; // adjust location of dragged object so doesn't jump to mouse position
-  }
-}
-// Функция окончания перемещения
-document.onmouseup = function(e)
-/*End dragging*/
-{
-  if (dragObj) {
-    dragObj = null;
-    window.removeEventListener('mousemove', dragObject, true);
-    window.removeEventListener('touchmove', dragObject, true);
-  }
-}
-
 // Слайдер
 var sliderBody = document.querySelector('.general-body');
 var sliderBack = document.querySelector('.general-body__sliderbg');
@@ -403,27 +360,84 @@ var rangeStart = document.querySelector('#filter-range-start');
 var rangeEnd = document.querySelector('#filter-range-end');
 var rangeStartControl = document.querySelector('#filter-range-start-control');
 var rangeEndControl = document.querySelector('#filter-range-end-control');
+var rangeRuler = document.querySelector('.filter__range-ruler');
+var rangeRulerActive = document.querySelector('.filter__range-ruler-active');
 
-if (rangeStartDisplay && rangeEndDisplay && rangeStart && rangeEnd && rangeStartControl && rangeEndControl) {
-  var xOffset = 0;
-  var minPrice = rangeStart.value;
-  var maxPrice = rangeEnd.value;
-  rangeStartDisplay.innerHTML = minPrice;
-  rangeEndDisplay.innerHTML = maxPrice;
-  rangeStartControl.addEventListener('click', function(evt) {
-    rangeStart.value = parseInt(rangeStart.value, 10) + 100;
-    maxPrice = rangeStart.value;
-    rangeStartDisplay.innerHTML = maxPrice;
-  });
-  rangeEndControl.addEventListener('click', function(evt) {
-    rangeEnd.value = parseInt(rangeEnd.value, 10) + 100;
-    minPrice = rangeEnd.value;
-    rangeEndDisplay.innerHTML = minPrice;
-  });
-  window.onload = function() {
-    rangeStartControl.addEventListener("mousedown", startDrag, true);
-    rangeStartControl.addEventListener("touchstart", startDrag, true);
-    rangeEndControl.addEventListener("mousedown", startDrag, true);
-    rangeEndControl.addEventListener("touchstart", startDrag, true);
+//Функция перемещения по оси Y
+//На основе туториала: https://www.w3schools.com/howto/howto_js_draggable.asp
+function dragElement(elmnt, min, max, ruler) {
+  var pos1 = 0,
+    pos2 = 0;
+  elmnt.onmousedown = dragMouseDown;
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos2 = e.clientX;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
   }
+
+  function elementDrag(e) {
+    var offsetX;
+    var rulerWidth;
+    var resultStart;
+    var resultEnd;
+    e = e || window.event;
+    e.preventDefault();
+    elmnt.focus();
+    // calculate the new cursor position:
+    pos1 = pos2 - e.clientX;
+    pos2 = e.clientX;
+    // set the element's new position:
+    offsetX = elmnt.offsetLeft - pos1;
+    if (typeof min === 'object') {
+      if (offsetX >= min.offsetLeft && offsetX <= max) {
+        //Перемещаем правый ползунок
+        elmnt.style.left = offsetX + 'px';
+        rulerWidth = Math.abs(rangeStartControl.offsetLeft - rangeEndControl.offsetLeft) + "px";
+      }
+    } else if (typeof max === 'object') {
+      if (offsetX >= min && offsetX <= max.offsetLeft) {
+        //Перемещаем левый ползунок
+        elmnt.style.left = offsetX + 'px';
+        rangeRulerActive.style.left = elmnt.style.left;
+        rulerWidth = Math.abs(rangeStartControl.offsetLeft - rangeEndControl.offsetLeft) + "px";
+      }
+    }
+    //Меняем подписи и значения в полях
+    resultStart = Math.round((rangeStartControl.offsetLeft - minX) * scaledInput);
+    resultEnd = Math.round((rangeEndControl.offsetLeft - minX) * scaledInput);
+    rangeStartDisplay.innerHTML = resultStart;
+    rangeEndDisplay.innerHTML = resultEnd;
+    rangeStart.value = resultStart;
+    rangeEnd.value = resultEnd;
+    // Меняем длину активной линейки
+    rangeRulerActive.style.width = rulerWidth;
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+if (rangeStartDisplay && rangeEndDisplay && rangeStart && rangeEnd && rangeStartControl && rangeEndControl && rangeRuler && rangeRulerActive) {
+  var minX = rangeRuler.offsetLeft - rangeStartControl.offsetWidth / 2;
+  var maxX = rangeRuler.offsetWidth + rangeStartControl.offsetWidth / 2;
+  var maxInput = rangeEnd.getAttribute('max');
+  var scaledInput = maxInput / (maxX - minX);
+  // Прячем поля ввода и tabindex если JS загрузился
+  rangeStart.classList.add('visually-hidden');
+  rangeEnd.classList.add('visually-hidden');
+  addTabIndex([rangeStart, rangeEnd]);
+  // Устанавливаем значения подписей согласно value
+  rangeStartDisplay.innerHTML = rangeStart.value;
+  rangeEndDisplay.innerHTML = rangeEnd.value;
+  //Вызываем функции перетаскивания
+  dragElement(rangeStartControl, minX, rangeEndControl);
+  dragElement(rangeEndControl, rangeStartControl, maxX);
 }
